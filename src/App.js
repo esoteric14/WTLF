@@ -4,7 +4,7 @@ import Footer from "./components/footer/footer";
 import Home from "./components/home/home";
 import Whotlf from "./components/who/whotlf";
 import Whichtlf from "./components/which/whichtlf";
-import { Routes, Switch, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (

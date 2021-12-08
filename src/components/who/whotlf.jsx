@@ -1,33 +1,31 @@
-import React, { useRef, useState, useEffect } from "react";
-import ScrollAnimation from "react-animate-on-scroll";
+import React, { useState, useEffect } from "react";
 import forehead from "../../assets/head.png";
 import chin from "../../assets/chin.png";
 import painting from "../../assets/painting.png";
 import "./whotlf.css";
 import Fade from "react-reveal/Fade";
-import Reveal from "react-reveal/Reveal";
 import { Div } from "./whotlf.styled";
 
 const Whotlf = () => {
   const [reveal, setReveal] = useState(false);
   const [scrollPos, setScrollPos] = useState(0);
-  const handleScroll = (e) => {};
+  const handleScroll = () => {
+    let scrollTop = window.scrollY;
+    let docHeight = document.body.offsetHeight;
+    let winHeight = window.innerHeight;
+    let scrollPercent = scrollTop / (docHeight - winHeight);
+    scrollPercent = Math.round(scrollPercent * 100);
+    console.log(scrollPercent);
+    setScrollPos(scrollPercent);
+  };
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      let scrollTop = window.scrollY;
-      let docHeight = document.body.offsetHeight;
-      let winHeight = window.innerHeight;
-      let scrollPercent = scrollTop / (docHeight - winHeight);
-      scrollPercent = Math.round(scrollPercent * 100);
-      console.log(scrollPercent);
-      setScrollPos(scrollPercent);
-    });
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll");
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   useEffect(() => {
-    if (scrollPos > 74) {
+    if (scrollPos > 50) {
       setReveal(true);
     } else {
       setReveal(false);
