@@ -11,15 +11,23 @@ nav{
     border-bottom: 3px solid var(--black);
     line-height: 0;
 }
-ul{
+nav ul{
     display: flex;
-    justify-content :space-around;
+    justify-content :space-between;
     align-items: center;
-    min-width: 40%; 
+    min-width: 30%; 
     list-style: none;
-    color:#000
+    color:var(--black);
+    width:30%;
 }
 .link-menu{
     text-decoration: none;
-    color: #000;
+    color: var(--black);
+}
+nav li{
+    padding: 6px;
+    margin-bottom: -20px;
+}
+nav li:hover, .active li{
+    border-bottom: 6px solid red;
 }
