@@ -8,15 +8,15 @@ const header = () => {
       <nav>
         <h3>WTLF.club</h3>
         <ul>
-          <Link to="/">
+          <Link className="link-menu" to="/">
             {" "}
             <li>WhatTLF?</li>
           </Link>
-          <Link to="/WhoTLF">
+          <Link className="link-menu" to="/WhoTLF">
             {" "}
             <li>WhoTLF?</li>
           </Link>
-          <Link to="/WhichTLF">
+          <Link className="link-menu" to="/WhichTLF">
             {" "}
             <li>WhichTLF?</li>
           </Link>

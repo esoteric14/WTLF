@@ -1,0 +1,12 @@
+.footer-wrapper{
+    width: 100%;
+}
+.svg-container{
+    margin: 0 auto;
+    width: 30%;
+    background: url("../../assets/footer.svg") no-repeat;
+    background-size: contain;
+    height: 20vh;
+    margin-top: 10%;
+    margin-bottom: 2%;
+}
