@@ -4,23 +4,23 @@ import Footer from './components/footer/footer';
 import Home from './components/home/home';
 import Whotlf from './components/who/whotlf';
 import Whichtlf from './components/which/whichtlf';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Routes, Switch, Route, Link } from 'react-router-dom';
 
 
 function App() {
   return (
-    <Router>
+    <>
          <div className="App">
             <Header/>
-            <Switch>
-              <Route path="/" exac component={Home}></Route>
-              <Route path="/WhatTLF"  component={Home}/>
-              <Route path="/WhoTLF" component={Whotlf}/>
-              <Route path="/WhichTLF"  component={Whichtlf}/>
-            </Switch>
+            <Routes>
+              <Route path="/" exac element={<Home/>}></Route>
+              <Route path="/WhatTLF"  element={<Home/>}/>
+              <Route path="/WhoTLF" element={<Whotlf/>}/>
+              <Route path="/WhichTLF"  element={<Whichtlf/>}/>
+            </Routes>
             <Footer/>
          </div>
-    </Router>
+    </>
   );
 }
 
