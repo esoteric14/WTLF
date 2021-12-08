@@ -1,3 +1,6 @@
-:root{
-    --black: #000000;
+.App {
+  height: 100%;
+}
+:root {
+  --black: #000000;
 }

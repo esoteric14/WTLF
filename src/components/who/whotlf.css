@@ -1,0 +1,46 @@
+.who-tlf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120vh;
+}
+.image-container {
+  display: flex;
+  flex-direction: column;
+}
+.image-container .none {
+  display: none;
+}
+.fore-head {
+  width: 198px;
+  height: 221px;
+}
+.chin {
+  width: 198px;
+  height: 153px;
+}
+.text-container p {
+  color: #8a8a8a;
+  font-size: 75px;
+  font-weight: 300;
+  text-align: right;
+  font-family: "Open Sans";
+  margin: 0;
+}
+.text-container {
+  width: 295px;
+  height: 306px;
+  position: relative;
+}
+.text-and-image-wrapper {
+  display: flex;
+  height: max-content;
+  align-items: center;
+}
+.fade-image {
+  position: absolute;
+  align-items: flex-start;
+  justify-content: right;
+  top: 0;
+  right: 0;
+}
