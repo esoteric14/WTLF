@@ -59,6 +59,48 @@ const Index = () => {
                     </p>
                 </div>
             </section>
+            <section className="three">
+               <div className="third-wrapper">
+                   <div className="grades">
+                        <h2>Elemental rarity grades</h2>
+                        <div>
+                            <p>Every WTLF is made up of many different elements. And each element occurs in different numbers... some rarer than others. Be it a set of eyelashes, or a vintage t-shirt or one of the many fancy backgrounds, everything has a grade.</p>
+                            <p>The rarest of the rare are the “S-Class” and and the most common is “G-Class”. Each element gets a grade and when they are added together, you get the over all WTLF grade. So a WTLF with more  rare elements is more likely to be a higher grade WTLF.  </p>
+                        </div>
+                   </div>
+
+                   <div class="flex grades-grid">
+                       <div className="left sz35">
+                           <img src="/headExplode.gif"></img>
+                       </div>
+                       <div className="right sz35">
+                           <div className="lists">
+                            <ul>
+
+                                    <li><b>Grade S:</b>    1-3 occurences</li>
+
+                                    <li><b>Grade A:  </b>  4-10 occurences</li>
+
+                                    <li><b>Grade B:</b>    11-50 occurences</li>
+
+                                    <li><b>Grade C: </b>   51-100 occurences</li>
+
+                                    <li><b>Grade D: </b>   101-500 occurences</li>
+
+                                    <li><b>Grade E: </b>   501-2,000 occurences</li>
+
+                                    <li><b>Grade F: </b>   2,001-5,000 occurences  </li>
+
+                                    <li><b>Grade G: </b>   5,000+  </li> 
+
+                                </ul>
+                           </div>
+                       </div>
+                   </div>
+    
+
+               </div>
+           </section>
         </>
     )
 };

@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 5%;
 }
 
 .red {
@@ -49,7 +50,7 @@
 }
 
 @media screen and (max-width: 700px) {
-    .hero {
+    .hero, .grades-grid {
         flex-direction: column;
     }
     .item2 img {
@@ -72,6 +73,7 @@
     background: rgba(244, 244, 244, 0.5);
     border-radius: 74px;
     padding: 125px 90px;
+    margin:3%;
 }
 
 .beta .hero {

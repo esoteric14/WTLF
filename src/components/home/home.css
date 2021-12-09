@@ -1,8 +1,8 @@
 .flex{
     display: flex ;
     flex-direction: row;
-    /* flex-flow: column wrap; */
     width:100%;
+    align-items: stretch;
 }
 .wrapper .one{
     width: 50vw;
@@ -117,13 +117,11 @@
 .grades p{
     font-size: 1.1em;
 }
-/* .grades-grid{
-    height: 40vh;
-} */
+
 .left, .right{
     flex:1;
     width:80%;
-    /* height: 100%; */
+    min-height: 100%;
 }
 .left img{
     width: 90%;
@@ -138,12 +136,16 @@
     height: 100%; */
     padding: 5%;
 }
+ul{
+    list-style: none;
+}
 .lists ul{
     flex-direction: column;
     align-items: flex-start;
+    list-style: none;
 }
 
 .lists ul li{
-    font-size: 1.3em;
+    font-size: 20px;
     padding: 20px 10px;
 }
