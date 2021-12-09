@@ -1,7 +1,5 @@
 import React from 'react';
 import "./home.css";
-import two from "../../assets/two.png";
-import three from "../../assets/three.png";
 import four from "../../assets/four.png";
 
 const Home = () => {
@@ -34,7 +32,7 @@ const Home = () => {
                             <h1 class="red">why is </h1>
                         </div>
                         <div className="img sz35">
-                            <img src={two}/>
+                            <img src="/two.png"/>
                         </div>
                         <div className="space sz30">
                         </div>
@@ -45,7 +43,7 @@ const Home = () => {
                             <h1 class="yellow">better than </h1>
                         </div>
                         <div className="img sz35">
-                            <img src={three}/>
+                            <img src="/three.png"/>
                         </div>
                         <div className="title sz10">
                             <h1 class="yellow">?</h1>

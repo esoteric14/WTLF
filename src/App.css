@@ -4,3 +4,7 @@
 :root {
   --black: #000000;
 }
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
