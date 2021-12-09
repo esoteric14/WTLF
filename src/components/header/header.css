@@ -11,6 +11,12 @@ nav{
     border-bottom: 3px solid var(--black);
     line-height: 0;
 }
+.fixedNav{
+    position: fixed;
+    width: 90vw;
+    background: #fff;
+    top: 0;
+}
 nav ul{
     display: flex;
     justify-content :space-between;

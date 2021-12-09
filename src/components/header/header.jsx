@@ -11,7 +11,7 @@ const Header = () => {
   }
   return (
     <div className="container">
-            <nav>
+            <nav className={dropdownOpen ? 'fixedNav' : 'normalNav'}>
                 <h3>WTLF.club</h3>
                 <ul className="non-burger">
                     <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/"> <li>WhatTLF?</li></NavLink>
