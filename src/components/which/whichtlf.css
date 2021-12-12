@@ -3,7 +3,7 @@
   justify-content: space-between;
   position: relative;
   flex-wrap: wrap;
-  margin: 0 30px;
+  margin: 0 60px;
 }
 @media (max-width: 1180px) {
   .which_tlf {
