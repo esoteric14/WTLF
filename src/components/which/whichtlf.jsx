@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Search from "../Search/Search";
 import "./whichtlf.css";
 
 const Whichtlf = ({ face }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <section className="container which_tlf">
+    <section className="which_tlf">
       <div className="item">
-        {/* <img src="/frame.svg" /> */}
         <img
           className="frame"
           src="https://wtlf.mypinata.cloud/ipfs/QmTbuBzWkjxQ3Z83jKYZEJ9r4FHMw5SVUFjYtJxHvBUCqw"
@@ -22,14 +21,14 @@ const Whichtlf = ({ face }) => {
             <h2 style={{ marginRight: "20px" }}>WTLF #2833</h2>{" "}
             <div>
               <b>|</b> <a href="#">OpenSea</a>
-            </div>
-            <div className="btns item__grow_1_mobile">
-              <button>
-                <img src="/button-left.svg" alt="left" />
-              </button>
-              <button>
-                <img src="/button-right.svg" alt="right" />
-              </button>
+              <div className="btns item__grow_1_mobile">
+                <button>
+                  <img src="/button-left.svg" alt="left" />
+                </button>
+                <button>
+                  <img src="/button-right.svg" alt="right" />
+                </button>
+              </div>
             </div>
           </div>
           <p>WTLF Grade: A</p>

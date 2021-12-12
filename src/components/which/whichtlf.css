@@ -3,9 +3,10 @@
   justify-content: space-between;
   position: relative;
   flex-wrap: wrap;
+  margin: 0 30px;
 }
 
-.container.which_tlf .item {
+.which_tlf .item {
   display: flex;
   flex-direction: column;
   width: 560px;
@@ -153,7 +154,10 @@ img.frame {
 }
 
 @media (max-width: 600px) {
-  .container.which_tlf .item {
+  .which_tlf {
+    margin: 0;
+  }
+  .which_tlf .item {
     width: 100%;
     height: fit-content;
   }

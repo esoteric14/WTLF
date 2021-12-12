@@ -5,7 +5,7 @@ const Index = () => {
     return (
         <>
             <section>
-                <div className="container">
+                <div className="pad-left-right">
                     <div className="hero ng-mr-80">
                         <div className="title red item1">Why the long</div>
                         <div className="item2">
