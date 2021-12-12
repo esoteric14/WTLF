@@ -16,9 +16,9 @@ const Index = () => {
                     <div className="hero">
                         <div className="item hero_desc">
                             <div className="item">
-                                <h5>
+                                <h4>
                                     “WTF is the WTLF.club?”
-                                </h5>
+                                </h4>
                                 <p>
                                     WTLF (or ‘Why The Long Face’ for the pedants) is a set of 10,000 original, unique, on-chain, algorithmically created NFT characters by the Rogues Collective.
                                 </p>
@@ -48,9 +48,9 @@ const Index = () => {
                     <div className="title yellow item3 hide-sm">?</div>
                 </div>
                 <div className="description">
-                    <h5>
+                    <h4>
                         The higher the grade, the rarer the asset!
-                    </h5>
+                    </h4>
                     <p>
                         Every element is picked randomly to create unique characters. However some characters have rarer elements than others (a Japanese Lacquered Comb above versus cornrows below). Naturally this has an effect on the price of the WTLF.
                     </p>
