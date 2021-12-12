@@ -5,6 +5,11 @@
   flex-wrap: wrap;
   margin: 0 30px;
 }
+@media (max-width: 1180px) {
+  .which_tlf {
+    justify-content: center;
+  }
+}
 
 .which_tlf .item {
   display: flex;
