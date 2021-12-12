@@ -2,14 +2,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 120vh;
+  min-height: 90vh;
+  position: relative;
 }
 .image-container {
   display: flex;
   flex-direction: column;
-}
-.image-container .none {
-  display: none;
+  position: absolute;
+  align-self: center;
+  left: calc(50% - 100px);
+  overflow: visible;
 }
 .fore-head {
   width: 198px;
@@ -27,15 +29,18 @@
   font-family: "Open Sans";
   margin: 0;
 }
-.text-container {
+.text-container.desktop {
+  display: block;
   width: 295px;
   height: 306px;
-  position: relative;
+  position: absolute;
+  left: calc(50% - 400px);
+}
+.text-container.mobile {
+  display: none;
 }
 .text-and-image-wrapper {
   display: flex;
-  height: max-content;
-  align-items: center;
 }
 .fade-image {
   position: absolute;
@@ -43,4 +48,92 @@
   justify-content: right;
   top: 0;
   right: 0;
+}
+.text-between-images {
+  max-height: 308px;
+  padding: 0 30px;
+  overflow-x: visible;
+  overflow-y: hidden;
+  transition: 1s;
+}
+.text-between-images.shrinked {
+  height: 0;
+}
+.text-between-images.expanded {
+  height: 308px;
+}
+.text-between-images p {
+  margin: 0;
+  font-family: "Open Sans";
+  font-size: 12px;
+  line-height: 30px;
+  white-space: nowrap;
+  overflow-x: visible;
+}
+.logicbomb {
+  color: #ff00e5;
+  cursor: pointer;
+}
+.partmeister {
+  color: #ff7a00;
+  cursor: pointer;
+}
+.mobile-img-wrapper {
+  display: none;
+}
+@media (max-width: 768px) {
+  .who-tlf {
+    display: block;
+    height: 100%;
+  }
+  .image-container {
+    width: auto;
+    height: auto;
+    left: auto;
+  }
+  .fade-image-mobile {
+    display: block;
+  }
+  .text-container.mobile {
+    display: block;
+    width: 200px;
+    margin: 0 30px;
+    transition: 1s;
+    overflow: hidden;
+  }
+  .text-container.mobile.expanded {
+    height: 306px;
+  }
+  .text-container.mobile.shrinked {
+    height: 0px;
+  }
+  .text-container.mobile p {
+    word-wrap: normal;
+    text-align: left;
+    line-height: 80px;
+  }
+  .text-container.desktop {
+    display: none;
+  }
+  .text-between-images {
+    position: relative;
+  }
+  .mobile-img-wrapper {
+    top: 0px;
+    left: 10px;
+    position: absolute;
+    display: flex;
+    width: 90vw;
+  }
+  .flex-container {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    display: flex;
+    width: 90vw;
+  }
+  .black-area-close {
+    width: 100%;
+    background-color: black;
+  }
 }
