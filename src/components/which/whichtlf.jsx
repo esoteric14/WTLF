@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Search from '../Search/Search';
 import "./whichtlf.css";
 
 const Whichtlf = ({ face }) => {
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <section className="container which_tlf">
+        <section className="pad-left-right which_tlf">
             <div className="item">
                 {/* <img src="/frame.svg" /> */}
                 <img className='frame' src="https://wtlf.mypinata.cloud/ipfs/QmTbuBzWkjxQ3Z83jKYZEJ9r4FHMw5SVUFjYtJxHvBUCqw" width="450" height="600" />

@@ -4,7 +4,7 @@ import './footer.css';
 
 const footer = () => {
     return (
-        <div className="container">
+        <div className="pad-left-right">
             <div className="footer-wrapper">
                 <div class="svg-container">
                 </div>
