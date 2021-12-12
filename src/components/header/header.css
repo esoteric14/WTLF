@@ -35,7 +35,9 @@ nav li{
     margin-bottom: -20px;
 }
 nav li:hover, .active li{
-    border-bottom: 6px solid red;
+    /* border-bottom: 6px solid red; */
+    text-decoration: underline 7px solid red;
+    text-underline-position: under;
 }
 
 .hamburger{

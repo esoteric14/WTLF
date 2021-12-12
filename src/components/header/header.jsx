@@ -14,9 +14,9 @@ const Header = () => {
             <nav className={dropdownOpen ? 'fixedNav' : 'normalNav'}>
                 <h3>WTLF.club</h3>
                 <ul className="non-burger">
-                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/"> <li>WhatTLF?</li></NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhoTLF"> <li>WhoTLF?</li></NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhichTLF"> <li>WhichTLF?</li></NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/"> <li>WhatTLF<span>?</span></li></NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhoTLF"> <li>WhoTLF<span>?</span></li></NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhichTLF"> <li>WhichTLF<span>?</span></li></NavLink>
                 </ul>
                 <div className="hamburger" onClick={displaynav}>
                     <div className="burger ham1"></div>
@@ -27,9 +27,9 @@ const Header = () => {
             <div className={dropdownOpen ? 'dropActive' : 'dropInactive'}>
               <div className="dropDown">
                   <ul className="burgerdropDown">
-                      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/"> <li>WhatTLF?</li></NavLink>
-                      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhoTLF"> <li>WhoTLF?</li></NavLink>
-                      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhichTLF"> <li>WhichTLF?</li></NavLink>
+                      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/"> <li>WhatTLF<span>?</span></li></NavLink>
+                      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhoTLF"> <li>WhoTLF<span>?</span></li></NavLink>
+                      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhichTLF"> <li>WhichTLF<span>?</span></li></NavLink>
                   </ul>
               </div>
             </div>
