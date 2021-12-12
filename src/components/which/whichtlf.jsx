@@ -1,46 +1,37 @@
 import React from 'react';
-import Frame from "../../assets/picture-frame.svg";
-import buttonLeft from "../../assets/button-left.svg";
-import buttonRight from"../../assets/button-right.svg";
+import Search from '../Search/Search';
+
 import "./whichtlf.css";
 
-const whichtlf = () => {
+const whichtlf = ({face}) => {
     return (
-        <div className="container">
-            <div className="whichTLF flex">
-                <div className="frame sz50">
-                    <img  src={Frame}/>
+        <section className="container which_tlf">
+            <div className="item">
+                <img src="/frame.svg" />
+            </div>
+            <div className="item">
+                <div className='info'>
+                    <h2>WTLF #2833</h2>
+                    <p>WTLF Grade: A</p>
+                    <p>WTLF Percentile: 93.7</p>
+                    <p>Rarest Features: <a href='#'>Japanese Comb</a></p>
+                    <p>Most common Feature: <a href='#'>Languid Eyelids with Eye Liner</a></p>
                 </div>
-                <div className="card sz50">
-                    <div className="card-wrapper">
-                        <div className="data">
-                            <h2>WTLF #7203</h2>
-                            <ul>
-                                <li><b>WTLF Grade:</b> B  </li>
-                                <li><b>WTLF Percentile:</b> 88.2</li>
-                                <li><b>Rarest Features:</b> Tattoo #19</li>
-                                <li><b>Most Common Feature:</b> Comb Over</li>
-                            </ul>
-                        </div>
-                    <div className="navBtn-search-holder flex">
-                        <div className="navBtn flex">
-                            <div className="btn btn-left">
-                                <img src={buttonLeft}></img>
-                            </div>
-                            <div className="btn btn-right">
-                                <img src={buttonRight}></img>
-                            </div>
-                        </div>
-                        {/* <div className="search-box flex">
-                            <input type="text"></input>
-                            <div className="submit-btn">search</div>
-                        </div> */}
+                <div className="action">
+                    <div className="btns item__grow_1">
+                        <button>
+                            <img src="/button-left.svg"/>
+                        </button>
+                        <button>
+                            <img src="/button-right.svg"/>
+                        </button>
                     </div>
-                    
+                    <div className="search item__grow_3" >
+                        <Search/>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
