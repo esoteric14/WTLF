@@ -10,7 +10,7 @@ const Header = () => {
       setdropdownOpen(!dropdownOpen);
   }
   return (
-    <div className="container">
+    <div className="header">
             <nav className={dropdownOpen ? 'fixedNav' : 'normalNav'}>
                 <h3>WTLF.club</h3>
                 <ul className="non-burger">

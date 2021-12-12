@@ -1,3 +1,6 @@
+.pad-left-right{
+    padding: 0% 5%;
+}
 .hero {
     display: flex;
     justify-content: center;
