@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .container.which_tlf .item {
@@ -41,6 +42,9 @@
 .item__grow_1 {
   flex-grow: 1;
 }
+.item__grow_1_mobile {
+  display: none;
+}
 .item__grow_3 {
   flex-grow: 3;
 }
@@ -52,7 +56,8 @@ img.frame {
   border-style: inset;
   border-width: 60px;
   display: block;
-  height: auto;
+  width: 450px;
+  height: 600px;
   background-color: #ffe;
   margin: 0 auto;
 }
@@ -145,4 +150,29 @@ img.frame {
 
 .hide {
   display: none;
+}
+
+@media (max-width: 600px) {
+  .container.which_tlf .item {
+    width: 100%;
+    height: fit-content;
+  }
+  .item img {
+    object-fit: fill;
+    width: 50%;
+    height: 50%;
+  }
+  .info {
+    width: 100%;
+    border: none;
+  }
+  .item__grow_1 {
+    display: none;
+  }
+  .item__grow_1_mobile {
+    display: flex;
+  }
+  .action {
+    max-width: 100%;
+  }
 }

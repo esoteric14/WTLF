@@ -8,6 +8,11 @@
   align-items: center;
   width: 387px;
 }
+@media (max-width: 600px) {
+  .search_container {
+    width: 100%;
+  }
+}
 
 .search_container #search_face {
   border: none;

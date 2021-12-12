@@ -90,6 +90,7 @@
     width: auto;
     height: auto;
     left: auto;
+    position: relative;
   }
   .fade-image-mobile {
     display: block;
