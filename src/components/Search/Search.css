@@ -21,6 +21,14 @@
     color: #e1e1e1;
     padding-left: 8px;
 }
+.search_container #search_face:focus{
+    color: #60C6FF;
+
+}
+
+.search_container #search_face:focus + #search_btn{
+    background: #60C6FF;
+}
 
 .search_container #search_btn {
     font-family: Open Sans;

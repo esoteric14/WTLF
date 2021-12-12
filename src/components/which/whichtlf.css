@@ -1,3 +1,4 @@
+
 .which_tlf {
     display: flex;
     justify-content: space-between;
@@ -22,6 +23,7 @@
     background-color: transparent;
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 .action{
@@ -37,3 +39,31 @@
 .item__grow_3{
     flex-grow: 3;
 }
+
+img.frame {
+    -o-border-image: url("../../assets/frame.svg") 93 92 87 92 stretch stretch;
+    border-image: url("../../assets/frame.svg") 93 92 87 92 stretch stretch;
+    border-color: #f4be52;
+    border-style: inset; 
+    border-width: 60px;
+    display: block;
+    width: 40%;
+    height: auto;
+    background-color: #ffe;
+    margin: 0 auto;
+  }
+
+  .red_circle{
+      display: inline-block;
+    background-color: red;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: baseline;
+  }
+  .flex{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+  }

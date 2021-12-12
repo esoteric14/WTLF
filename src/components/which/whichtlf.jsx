@@ -1,17 +1,18 @@
 import React from 'react';
 import Search from '../Search/Search';
-
 import "./whichtlf.css";
 
 const whichtlf = ({face}) => {
     return (
         <section className="container which_tlf">
             <div className="item">
-                <img src="/frame.svg" />
+                {/* <img src="/frame.svg" /> */}
+                <img className='frame'src="https://wtlf.mypinata.cloud/ipfs/QmTbuBzWkjxQ3Z83jKYZEJ9r4FHMw5SVUFjYtJxHvBUCqw" width="450" height="600"/>
             </div>
             <div className="item">
                 <div className='info'>
-                    <h2>WTLF #2833</h2>
+                    <h5><span className='red_circle'></span>sold</h5>
+                    <div className='flex'><h2 style={{marginRight: '20px'}}>WTLF #2833</h2> <div><b>|</b> <a href="#">OpenSea</a></div></div>
                     <p>WTLF Grade: A</p>
                     <p>WTLF Percentile: 93.7</p>
                     <p>Rarest Features: <a href='#'>Japanese Comb</a></p>
