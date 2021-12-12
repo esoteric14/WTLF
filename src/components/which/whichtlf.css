@@ -77,4 +77,10 @@
     line-height: 35px;
     font-style: italic;
   }
+
+  @media (max-width: 1024px){
+    .whichTLF{
+        flex-direction: column;
+    }
+}
  

@@ -72,7 +72,7 @@
 .beta {
     background: rgba(244, 244, 244, 0.5);
     border-radius: 74px;
-    padding: 125px 90px;
+    padding: 100px 90px;
     margin:3%;
 }
 
@@ -92,7 +92,11 @@
 .beta .description {
     width: 40%;
 }
-
+.img-mob-view>img{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
 @media screen and (max-width: 980px) {
     .beta .hero:nth-child(2) {
         margin-bottom: 0;
@@ -109,6 +113,87 @@
     }
 
     .beta .description {
+        width: 100%;
+    }
+    .img-mob-view>img{
+        display: block;
+    }
+   .grades-grid>.left>img{
+        display: none;
+    }
+
+}
+.grades{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.grades h2{
+    color:#FF7A00;
+    font-size: 8vw;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin: 5% 0%;
+}
+.grades div{
+    width: 70%;
+}
+.left, .right{
+    flex:1;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+.left img{
+    width: 85%;
+    object-fit: contain;
+    border-radius: 45px;
+}
+.right div{
+    display: flex;
+    flex-direction: column;
+    background: #E6E6E6;
+    border-radius: 45px;
+    height: 100%;
+    width: 85%;
+    justify-content: center;
+}
+ul{
+    list-style: none;
+}
+.lists ul{
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+}
+
+.lists ul li{
+    flex: 0 0 auto;
+    font-size: 15px;
+    padding: 5px;
+}
+.para-occurences{
+    display: flex;
+    flex-direction: row;
+}
+.space, .occurences{
+    width: 50%;
+}
+.occurences>p{
+    text-align: center;
+    margin-block: 0px;
+    font-style: italic;
+}
+@media screen and (max-width: 980px){
+    .para-occurences{
+        flex-direction: column;
+    }
+    .grades div{
+        width: 100%;
+    }
+    .right{
         width: 100%;
     }
 }

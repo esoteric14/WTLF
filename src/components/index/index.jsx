@@ -63,11 +63,15 @@ const Index = () => {
                <div className="third-wrapper">
                    <div className="grades">
                         <h2>Elemental rarity grades</h2>
+                            <div className="img-mob-view">
+                                <img src="/headExplode.gif"></img>
+                            </div>
                         <div>
                             <p>Every WTLF is made up of many different elements. And each element occurs in different numbers... some rarer than others. Be it a set of eyelashes, or a vintage t-shirt or one of the many fancy backgrounds, everything has a grade.</p>
                             <p>The rarest of the rare are the “S-Class” and and the most common is “G-Class”. Each element gets a grade and when they are added together, you get the over all WTLF grade. So a WTLF with more  rare elements is more likely to be a higher grade WTLF.  </p>
                         </div>
                    </div>
+
 
                    <div class="flex grades-grid">
                        <div className="left sz35">
@@ -101,6 +105,13 @@ const Index = () => {
 
                </div>
            </section>
+           <div className="para-occurences">
+            <div className="space"></div>
+            <div className="occurences">
+            <p>
+               (All occurences are out of 10,000)</p>
+            </div>
+           </div>
         </>
     )
 };
