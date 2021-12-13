@@ -6,9 +6,9 @@ const Index = () => {
         <>
             <section>
                 <div className="pad-left-right">
-                    <div className="hero ng-mr-80">
+                    <div className="hero ng-mr-80 alignContents">
                         <div className="title red">Why the long</div>
-                        <div className="">
+                        <div className="shift-faces">
                             <img src="/SpinningHeads.gif" />
                         </div>
                         <div className="title red hide-sm">?</div>
@@ -16,7 +16,7 @@ const Index = () => {
                     <div className="hero">
                         <div className="item hero_desc">
                             <div className="item hero-desc">
-                                <h4>
+                                <h4 className="fontW-700">
                                     “WTF is the WTLF.club?”
                                 </h4>
                                 <p>
@@ -48,7 +48,7 @@ const Index = () => {
                     <div className="title yellow item3 hide-sm item-ques">?</div>
                 </div>
                 <div className="description">
-                    <h4>
+                    <h4 className="fontW-700">
                         The higher the grade, the rarer the asset!
                     </h4>
                     <p>
