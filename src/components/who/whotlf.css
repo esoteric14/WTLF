@@ -60,7 +60,7 @@
   height: 0;
 }
 .text-between-images.expanded {
-  height: 308px;
+  height: 280px;
 }
 .text-between-images p {
   margin: 0;
@@ -91,6 +91,7 @@
     height: auto;
     left: auto;
     position: relative;
+    margin-top: 20px;
   }
   .fade-image-mobile {
     display: block;
@@ -124,7 +125,7 @@
     left: 10px;
     position: absolute;
     display: flex;
-    width: 90vw;
+    /* width: 90vw; */
   }
   .flex-container {
     top: 0px;
