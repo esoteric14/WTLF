@@ -27,9 +27,9 @@ const Header = () => {
             <div className={dropdownOpen ? 'dropActive' : 'dropInactive'}>
               <div className="dropDown">
                   <ul className="burgerdropDown">
-                      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/"> <li>WhatTLF<span>?</span></li></NavLink>
-                      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhoTLF"> <li>WhoTLF<span>?</span></li></NavLink>
-                      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhichTLF"> <li>WhichTLF<span>?</span></li></NavLink>
+                      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/"> <li onClick={displaynav}>WhatTLF<span>?</span></li></NavLink>
+                      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhoTLF" onClick={displaynav}> <li>WhoTLF<span>?</span></li></NavLink>
+                      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhichTLF" onClick={displaynav}> <li>WhichTLF<span>?</span></li></NavLink>
                   </ul>
               </div>
             </div>

@@ -4,9 +4,26 @@ import "./whichtlf.css";
 
 const Whichtlf = ({ face }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [page, setPage] = useState(1);
+  const [data, setData] = useState({});
+  const getData = async (id) => {
+    try {
+      const temp = await fetch(
+        `https://api.whythelongface.club/faces?face=${id}`
+      );
+      const data = await temp.json();
+      console.log(data);
+      setData(data[0]);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  useEffect(() => {
+    getData(page);
+  }, [page]);
   return (
     <section className="which_tlf">
-      <div className="item">
+      <div className="item item-frame">
         <img
           className="frame"
           src="https://wtlf.mypinata.cloud/ipfs/QmTbuBzWkjxQ3Z83jKYZEJ9r4FHMw5SVUFjYtJxHvBUCqw"
@@ -18,14 +35,28 @@ const Whichtlf = ({ face }) => {
             <span className="red_circle"></span>sold
           </h5>
           <div className="flex">
-            <h2 style={{ marginRight: "20px" }}>WTLF #2833</h2>{" "}
+            <h2 style={{ marginRight: "20px" }}>
+              {data && data.AvatarName ? data.AvatarName : "WTLF #2833"}
+            </h2>{" "}
             <div>
               <b>|</b> <a href="#">OpenSea</a>
               <div className="btns item__grow_1_mobile">
-                <button>
+                <button
+                  onClick={() => {
+                    if (page > 1) {
+                      setPage(page - 1);
+                    }
+                  }}
+                >
                   <img src="/button-left.svg" alt="left" />
                 </button>
-                <button>
+                <button
+                  onClick={() => {
+                    if (page < 1000) {
+                      setPage(page + 1);
+                    }
+                  }}
+                >
                   <img src="/button-right.svg" alt="right" />
                 </button>
               </div>
@@ -36,22 +67,36 @@ const Whichtlf = ({ face }) => {
           <p>
             Rarest Features:{" "}
             <a href="#" onClick={() => setIsOpen(true)}>
-              Japanese Comb
+              {data && data.mostRare ? data.mostRare : "Japanese Comb"}
             </a>
           </p>
           <p>
             Most common Feature:{" "}
             <a href="#" onClick={() => setIsOpen(true)}>
-              Languid Eyelids with Eye Liner
+              {data && data.mostCommon
+                ? data.mostCommon
+                : "Languid Eyelids with Eye Liner"}
             </a>
           </p>
         </div>
         <div className="action">
           <div className="btns item__grow_1">
-            <button>
+            <button
+              onClick={() => {
+                if (page > 1) {
+                  setPage(page - 1);
+                }
+              }}
+            >
               <img src="/button-left.svg" alt="left" />
             </button>
-            <button>
+            <button
+              onClick={() => {
+                if (page < 1000) {
+                  setPage(page + 1);
+                }
+              }}
+            >
               <img src="/button-right.svg" alt="right" />
             </button>
           </div>
@@ -63,7 +108,7 @@ const Whichtlf = ({ face }) => {
       <div className={isOpen ? "show modal" : "hide"}>
         <div className="flex content">
           <div className="modal__img">
-            <img src="" />
+            <img src={data.defaultPath} />
           </div>
           <div className="modal__info">
             <div>
