@@ -52,9 +52,12 @@
 .text-between-images {
   max-height: 308px;
   padding: 0 30px;
-  overflow-x: visible;
+  overflow-x: hidden;
   overflow-y: hidden;
   transition: 1s;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 30px;
 }
 .text-between-images.shrinked {
   height: 0;
@@ -91,10 +94,15 @@
     height: auto;
     left: auto;
     position: relative;
-    margin-top: 20px;
+    margin: 20px 55px 0 55px;
   }
   .fade-image-mobile {
     display: block;
+    height: 273px;
+    margin: 4px;
+    width: 230px;
+    margin-left: -10px;
+    object-fit: cover;
   }
   .text-container.mobile {
     display: block;
@@ -104,7 +112,7 @@
     overflow: hidden;
   }
   .text-container.mobile.expanded {
-    height: 306px;
+    height: 320px;
   }
   .text-container.mobile.shrinked {
     height: 0px;
@@ -137,5 +145,22 @@
   .black-area-close {
     width: 100%;
     background-color: black;
+  }
+}
+
+@media (max-width: 425px) {
+  .image-container {
+    margin: 20px 10px 0 10px;
+  }
+  .text-between-images{
+    max-height: 308px;
+    padding: 0 0 0 30px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 1s;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 30px;
+    word-break: break-word;
   }
 }
