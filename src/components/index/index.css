@@ -245,6 +245,9 @@ ul {
   .grades h2 {
     font-size: 45px;
   }
+  .title{
+    font-size: 45px;
+  }
 }
 @media only screen and (min-width: 700px) and (max-width: 1025px){
   .ng-mr-80 {
