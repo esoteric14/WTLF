@@ -41,6 +41,9 @@
 .shift-faces>img{
   width:250px;
 }
+.spn>span{
+margin: 0px 20px;
+}
 .hero {
   display: flex;
   justify-content: flex-start;
@@ -175,6 +178,11 @@ a.active > li > span {
 }
 
 @media screen and (max-width: 700px) {
+  .spn{
+    display: flex;
+    flex-direction: column;
+    line-height: inherit;
+  }
   .beta {
     background-color: transparent;
     padding: 30px;

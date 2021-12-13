@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.css";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 
 const Header = () => {
   const [dropdownOpen, setdropdownOpen] = useState(false);
@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <div className="header">
             <nav className={dropdownOpen ? 'fixedNav' : 'normalNav'}>
-                <h3>WTLF.club</h3>
+                <h3><Link to="/" className="link-menu">WTLF.club</Link></h3>
                 <ul className="non-burger">
                     <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/"> <li>WhatTLF<span>?</span></li></NavLink>
                     <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhoTLF"> <li>WhoTLF<span>?</span></li></NavLink>

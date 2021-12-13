@@ -32,7 +32,7 @@ const Index = () => {
             <section>
                 <div className="pad-left-right">
                     <div className="hero ng-mr-80 alignContents">
-                        <div className="title red">
+                        <div className="title red spn">
                             <span>Why</span>
                             <span>the</span>
                             <span>long</span>
