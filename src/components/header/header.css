@@ -16,7 +16,6 @@ nav{
     width: 90vw;
     background: #fff;
     top: 0;
-    z-index: 100000;
 }
 nav ul{
     display: flex;
