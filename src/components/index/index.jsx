@@ -59,6 +59,7 @@ const Index = () => {
                     </div>
                 </div></section>
             <section className="beta">
+                <div className="beta-wrapper">
                 <div className="hero">
                     <div className="title red">Why is</div>
                     <div className="item2">
@@ -82,6 +83,7 @@ const Index = () => {
                     <p>
                         Check out the grade bands for elemental rarity below.
                     </p>
+                </div>
                 </div>
             </section>
             <section className="three">

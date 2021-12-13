@@ -60,6 +60,7 @@
 .yellow {
   color: #ffc000;
 }
+
 .title {
   font-family: Open Sans;
   font-style: normal;
@@ -82,9 +83,9 @@
   text-align: left;
   display: flex;
   /* flex-direction: column; */
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
-  margin-left: 30%;
+  margin-left: 18%;
 }
 
 .ng-mr-80 {
@@ -131,8 +132,13 @@ a.active > li > span {
   border-radius: 74px;
   padding: 75px 90px;
   margin: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-
+.beta-wrapper{
+  width: 70vw;
+}
 .beta .hero {
   align-items: baseline;
 }
@@ -314,19 +320,21 @@ ul {
   .title {
     margin-bottom: 3%;
   }
-  .hero-desc {
-    width: 70%;
-    margin: 0 auto;
+  .hero_desc{
+    margin: 0;
   }
-  .beta .hero {
-    align-items: center;
+  .beta .hero{
+    align-items: flex-start;
   }
   .beta .hero:nth-child(2) {
-    align-items: center;
+    align-items:flex-start;
     margin-bottom: 0;
   }
   .beta .description {
     width: 45%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
-}
+  .beta .item2 img {
+    margin: 0;
+  }
+  }
