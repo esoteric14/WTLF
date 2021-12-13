@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Search from "../Search/Search";
 import "./whichtlf.css";
+import { Link } from "react-router-dom";
 
 const Whichtlf = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +44,7 @@ const Whichtlf = () => {
           src={data.defaultPath}
         />
       </div>
-      <div className="item">
+      <div className="item item-info">
         <div className="info">
           <h5>
             <span className="red_circle"></span>sold
@@ -53,7 +54,7 @@ const Whichtlf = () => {
               {data.AvatarName}
             </h2>
             <div>
-              <b className="hide">|</b> <a className="hide">OpenSea</a>
+              <b className="hide">|</b> <Link to="http://opensea.io/collection/wtlf" className="hide">OpenSea</Link>
               <div className="btns item__grow_1_mobile">
                 <button
                   onClick={() => {
