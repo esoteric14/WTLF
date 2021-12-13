@@ -2,31 +2,45 @@ import React, { useState, useEffect } from "react";
 import Search from "../Search/Search";
 import "./whichtlf.css";
 
-const Whichtlf = ({ face }) => {
+const Whichtlf = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [page, setPage] = useState(1);
   const [data, setData] = useState({});
-  const getData = async (id) => {
-    try {
-      const temp = await fetch(
-        `https://api.whythelongface.club/faces?face=${id}`
-      );
-      const data = await temp.json();
-      console.log(data);
-      setData(data[0]);
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  const [rarityData, setRarityData] = useState({});
+  const getRarity = (rarity)=> {
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+    
+    fetch(`http://api.whythelongface.club/rarity?prop=${rarity}`, requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        setRarityData(result[0]);
+        setIsOpen(true);
+      })
+      .catch(error => console.log('error', error));
+  }
+  const handleRarestClick = (value) => {
+    getRarity(encodeURIComponent(value));
+  }
   useEffect(() => {
-    getData(page);
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+
+    fetch(`http://api.whythelongface.club/faces?face=${page}`, requestOptions)
+      .then(response => response.json())
+      .then(result => setData(result[0]))
+      .catch(error => console.log('error', error));
   }, [page]);
   return (
     <section className="which_tlf">
       <div className="item item-frame">
         <img
           className="frame"
-          src="https://wtlf.mypinata.cloud/ipfs/QmTbuBzWkjxQ3Z83jKYZEJ9r4FHMw5SVUFjYtJxHvBUCqw"
+          src={data.defaultPath}
         />
       </div>
       <div className="item">
@@ -36,10 +50,10 @@ const Whichtlf = ({ face }) => {
           </h5>
           <div className="flex">
             <h2 style={{ marginRight: "20px" }}>
-              {data && data.AvatarName ? data.AvatarName : "WTLF #2833"}
-            </h2>{" "}
+              {data.AvatarName}
+            </h2>
             <div>
-              <b>|</b> <a href="#">OpenSea</a>
+              <b className="hide">|</b> <a className="hide">OpenSea</a>
               <div className="btns item__grow_1_mobile">
                 <button
                   onClick={() => {
@@ -62,22 +76,10 @@ const Whichtlf = ({ face }) => {
               </div>
             </div>
           </div>
-          <p>WTLF Grade: A</p>
-          <p>WTLF Percentile: 93.7</p>
-          <p>
-            Rarest Features:{" "}
-            <a href="#" onClick={() => setIsOpen(true)}>
-              {data && data.mostRare ? data.mostRare : "Japanese Comb"}
-            </a>
-          </p>
-          <p>
-            Most common Feature:{" "}
-            <a href="#" onClick={() => setIsOpen(true)}>
-              {data && data.mostCommon
-                ? data.mostCommon
-                : "Languid Eyelids with Eye Liner"}
-            </a>
-          </p>
+          <p style={{display: 'none'}}>WTLF Grade: {}</p>
+          <p>WTLF Percentile: {data.wtlfScore}</p>
+          <p>Rarest Features: <a href="javascript:void(0);" onClick={() => handleRarestClick(data.mostRare)}>{data.mostRare}</a></p>
+          <p>Most common Feature: <a href="javascript:void(0);" onClick={() => handleRarestClick(data.mostCommon)}>{data.mostCommon}</a></p>
         </div>
         <div className="action">
           <div className="btns item__grow_1">
@@ -101,7 +103,7 @@ const Whichtlf = ({ face }) => {
             </button>
           </div>
           <div className="search item__grow_3">
-            <Search />
+            <Search setPage={setPage} />
           </div>
         </div>
       </div>
@@ -112,9 +114,9 @@ const Whichtlf = ({ face }) => {
           </div>
           <div className="modal__info">
             <div>
-              <h1>japanese Comb</h1>
-              <p>Rarity Grade: A</p>
-              <p>occurence: 7/10000</p>
+              <h1>{rarityData.assetName}</h1>
+              <p>Rarity Grade: {rarityData.rarityGrade}</p>
+              <p>occurence: {rarityData.Count}/10000</p>
             </div>
             <button className="modal__btn">WTLF's</button>
           </div>

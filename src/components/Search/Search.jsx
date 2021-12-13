@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Search.css';
 
-const Search = () => {
-    return(
+const Search = ({ setPage }) => {
+    const [value, setValue] = useState('');
+    const handleChange = (event) => {
+        setValue(event.target.value);
+    }
+    const handleClick = () => {
+        setPage(value);
+    }
+
+    return (
         <div className='search_container'>
-            <input  type="number" id="search_face" name="search_face" min="1" max="5" placeholder='Search from 1-10000'/>
-            <button id="search_btn">Search</button>
+            <input onChange={handleChange} value={value} type="number" id="search_face" name="search_face" min="1" max="5" placeholder='Search from 1-10000' />
+            <button onClick={handleClick} id="search_btn">Search</button>
         </div>
     )
 }

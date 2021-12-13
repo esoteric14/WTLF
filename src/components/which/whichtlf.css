@@ -8,7 +8,7 @@
 @media (max-width: 1180px) {
   .which_tlf {
     justify-content: center;
-    margin-top:20%;
+    margin-top: 20%;
   }
 }
 
@@ -117,6 +117,12 @@ img.frame {
   width: 250px;
   height: 250px;
   border-radius: 54px;
+  overflow: hidden;
+}
+.modal__img img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
 }
 .modal__info {
   height: 250px;
