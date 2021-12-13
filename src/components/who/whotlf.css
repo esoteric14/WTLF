@@ -72,6 +72,7 @@
   line-height: 30px;
   white-space: nowrap;
   overflow-x: visible;
+  font-weight: 300;
 }
 .logicbomb {
   color: #ff00e5;

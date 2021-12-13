@@ -118,6 +118,11 @@ img.frame {
   height: 250px;
   border-radius: 54px;
 }
+.modal__img>img{
+    height: 250px;
+    width: 250px;
+    border-radius: 54px;
+}
 .modal__info {
   height: 250px;
   display: flex;
