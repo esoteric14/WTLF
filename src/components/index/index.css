@@ -1,20 +1,26 @@
-/* .first-section {
+@import "../../App.css";
+
+.alpha .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hidden{
+  visibility: hidden;
+}
+.alpha .description{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  gap: 40px;
+  margin-left: -100px;
+  margin-top: -50px;
 }
-.sib-flex {
-  display: flex;
-  align-items: center;
+.desc__content{
+  width: 350px;
 }
-.first-section-desc {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.first-section-desc h4,
-.first-section-desc p {
+
+.desc__content h4,
+.desc__content p {
   font-family: Open Sans;
   font-style: normal;
   font-weight: 700;
@@ -24,25 +30,46 @@
   color: #000000;
 }
 
-.first-section-desc p {
+.desc__content p {
   font-weight: 300;
-} */
+} 
+@media screen and (max-width: 768px){
+  .alpha .title{
+    flex-direction: column;
+    font-size: 90px;
+    line-height: 100px;
+  }
+  img.shift-faces {
+    margin: 10px;
+  }
+  .question__mark{
+    display: none;
+  }
+  .alpha .description{
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .beta{
+    background: transparent !important;
+  }
+}
 /* ----------------------------------New section css---------------------------------- */
 
 .pad-left-right {
   padding: 0% 5%;
 }
-.fontW-700{
+.fontW-700 {
   font-weight: 700;
 }
-.hero-desc>p, .description>p{
+.hero-desc > p,
+.description > p {
   font-weight: 300;
 }
-.shift-faces>img{
-  width:250px;
+.shift-faces > img {
+  width: 250px;
 }
-.spn>span{
-margin: 0px 20px;
+.spn > span {
+  margin: 0px 20px;
 }
 .hero {
   display: flex;
@@ -53,7 +80,7 @@ margin: 0px 20px;
   /* margin-left: 120px;
   margin-right: 120px; */
 }
-.alignContents{
+.alignContents {
   justify-content: center;
 }
 .red {
@@ -139,7 +166,7 @@ a.active > li > span {
   flex-direction: row;
   justify-content: center;
 }
-.beta-wrapper{
+.beta-wrapper {
   width: 70vw;
 }
 .beta .hero {
@@ -157,7 +184,7 @@ a.active > li > span {
 
 .beta .description {
   width: 35%;
-  margin-left:-2%;
+  margin-left: -2%;
 }
 .beta .description > * {
   margin: 10%;
@@ -178,7 +205,7 @@ a.active > li > span {
 }
 
 @media screen and (max-width: 700px) {
-  .spn{
+  .spn {
     display: flex;
     flex-direction: column;
     line-height: inherit;
@@ -257,29 +284,10 @@ ul {
   font-size: 15px;
   padding: 5px;
 }
-.para-occurences {
-  display: flex;
-  flex-direction: row;
-}
-.space,
-.occurences {
-  width: 50%;
-}
-.occurences > p {
-  text-align: center;
-  margin-block: 0px;
-  font-style: italic;
-}
+
 @media screen and (max-width: 980px) {
-  .para-occurences {
-    flex-direction: column;
-    align-items: center;
-  }
   .grades div {
     width: 100%;
-  }
-  .right {
-    /* width: 100%; */
   }
 }
 @media screen and (max-width: 1100px) {
@@ -305,11 +313,19 @@ ul {
   .title {
     font-size: 45px;
   }
-  .hero_desc{
+  .hero_desc {
     margin: 0;
   }
-  .beta .hero{
+  .beta .hero {
     align-items: flex-start;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .item-ques{
+    display: none;
+  }
+  .beta-wrapper{
+    width: 75vw;
   }
 }
 @media only screen and (min-width: 700px) and (max-width: 1025px) {
@@ -328,14 +344,14 @@ ul {
   .title {
     margin-bottom: 3%;
   }
-  .hero_desc{
+  .hero_desc {
     margin: 0;
   }
-  .beta .hero{
+  .beta .hero {
     align-items: flex-start;
   }
   .beta .hero:nth-child(2) {
-    align-items:flex-start;
+    align-items: flex-start;
     margin-bottom: 0;
   }
   .beta .description {
@@ -345,4 +361,157 @@ ul {
   .beta .item2 img {
     margin: 0;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .break__word{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+    text-align: left;
   }
+  .beta .title{
+    font-size: 70px;
+    line-height: 95px;
+  }
+}
+/* ---------------last section------------------- */
+.gamma__content {
+  margin-bottom: 60px;
+}
+
+.gamma__content h2 {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 84px;
+  line-height: 90px;
+  letter-spacing: -0.015em;
+  color: #ff7a00;
+}
+
+.gamma__content p,
+.gamma-show-md p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: -0.015em;
+  color: #000000;
+  width: 80%;
+}
+
+.gamma_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 30px;
+}
+.gamma_info_item {
+  border-radius: 46px;
+  overflow: hidden;
+  justify-self: start;
+  align-self: center;
+}
+
+.gamma_info_item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 420px;
+}
+.gamma_info_item_data {
+  padding: 90px 40px;
+  background-color: #e5e5e5;
+}
+
+.gamma__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gamma__list p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 23px;
+  letter-spacing: -0.015em;
+  color: #000000;
+  margin: 0 0 10px 0;
+}
+
+.gamma-img-container {
+  border-radius: 46px;
+  overflow: hidden;
+}
+
+.gamma-show-md {
+  display: none;
+}
+@media (max-width: 980px) {
+  .gamma_info {
+    gap: 10px;
+  }
+  .gamma_info_item_data {
+    padding: 55px 35px;
+  }
+  .gamma_info_item img {
+    height: 350px;
+  }
+  .gamma__list p {
+    font-size: 12px;
+  }
+  .gamma-md-hide {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .gamma_info {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    gap: 0px;
+  }
+  .gamma-hide-md {
+    display: none;
+  }
+  .gamma-show-md {
+    display: block;
+  }
+  .gamma_info_item {
+    width: 100%;
+  }
+  .gamma-img-container {
+    width: 100%;
+  }
+  .gamma_info_item:first-child,
+  .gamma-img-container {
+    border-radius: 0;
+  }
+  .gamma_info_item_data {
+    margin: 0 auto;
+    width: 76% !important;
+  }
+  .gamma-show-md {
+    display: block;
+    padding: 0 0 0 50px;
+  }
+  .gamma_info_item_data {
+    align-self: start;
+    margin-top: 40px !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .gamma__content h2 {
+    font-size: 60px;
+    line-height: 70px;
+    margin: 0;
+  }
+  .gamma__content {
+    margin-bottom: 40px;
+  }
+}
