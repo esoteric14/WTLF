@@ -7,8 +7,8 @@
   align-items: center;
   flex-wrap: wrap;
   margin-top: 5%;
-  margin-left: 120px;
-  margin-right: 120px;
+  /* margin-left: 120px;
+  margin-right: 120px; */
 }
 
 .red {
@@ -245,4 +245,36 @@ ul {
   .grades h2 {
     font-size: 45px;
   }
+}
+@media only screen and (min-width: 700px) and (max-width: 1025px){
+  .ng-mr-80 {
+    margin-bottom: 10px;
+}
+.hero{
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.title{
+  margin-bottom: 3%;
+}
+.hero-desc{
+    width: 70%;
+    margin: 0 auto;
+}
+.beta .hero{
+  align-items: center;
+}
+.beta .hero:nth-child(2) {
+  align-items: center;
+  margin-bottom: 0;
+}
+.beta .description {
+  width: 45%;
+  margin: 0 auto;
+}
 }
