@@ -110,7 +110,7 @@ const Whichtlf = () => {
       <div className={isOpen ? "show modal" : "hide"}>
         <div className="flex content">
           <div className="modal__img">
-            <img src={data.defaultPath} />
+            <img src={data.defaultPath} className="img-fluid" />
           </div>
           <div className="modal__info">
             <div>
