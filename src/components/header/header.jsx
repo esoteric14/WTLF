@@ -33,7 +33,7 @@ const Header = () => {
                   </ul>
               </div>
             </div>
-            <p>//roguescollective</p>
+            <p className="header__tag">//roguescollective</p>
         </div>
   );
 };

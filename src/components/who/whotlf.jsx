@@ -24,10 +24,14 @@ const Whotlf = () => {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <div className="who-tlf">
+    <div className="who-tlf" onClick={(event) => {
+      if(!event.target.classList.contains('side-img') && reveal){
+        setReveal(false)
+      }
+    }}>
       <ShortText superClass="desktop">
         <Fade right when={reveal}>
-          <img src={painting} alt="" className="fade-image" />
+          <img src={painting} alt="" className="fade-image side-img" />
         </Fade>
       </ShortText>
       <div className="image-container">
@@ -38,7 +42,10 @@ const Whotlf = () => {
         >
           <p>
             When
-            <span className="logicbomb" onClick={() => setReveal(true)}>
+            <span className="logicbomb" onClick={() => {
+              console.log('hi you');
+              setReveal(true)
+              }}>
               {" "}
               //logikbomb
             </span>{" "}
@@ -59,9 +66,9 @@ const Whotlf = () => {
           <p>the WTLF project</p>
           <Fade right when={reveal}>
             <div className="mobile-img-wrapper">
-              <div className="flex-container">
+              <div className="flex-container" style={{display:reveal?'block':'none'}}>
                 <img src={painting} alt="" className="fade-image-mobile" />
-                <div className="black-area-close"></div>
+                {/* <div className="black-area-close"></div> */}
               </div>
             </div>
           </Fade>
