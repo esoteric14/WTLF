@@ -32,11 +32,11 @@ const Index = () => {
             <section>
                 <div className="pad-left-right">
                     <div className="hero ng-mr-80">
-                        <div className="title red item1">Why the long</div>
-                        <div className="item2">
+                        <div className="title red">Why the long</div>
+                        <div className="">
                             <img src="/SpinningHeads.gif" />
                         </div>
-                        <div className="title red item3 hide-sm">?</div>
+                        <div className="title red hide-sm">?</div>
                     </div>
                     <div className="hero">
                         <div className="item hero_desc">
