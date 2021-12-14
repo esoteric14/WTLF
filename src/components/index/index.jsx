@@ -82,7 +82,7 @@ const Index = () => {
                     </div>
                 </div>
             </section>
-            <section className="container gamma">
+            <section  className="container gamma">
                 <div className="gamma__content">
                     <h2>Elemental rarity grades</h2>
                     <div className="gamma-hide-md">
