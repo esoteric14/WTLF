@@ -63,7 +63,7 @@ const Index = () => {
                         </div>
                     </div>
                     <div className="hero">
-                        <div className="title yellow item1 break__word"><span>better</span><span>than</span></div>
+                        <div className="title yellow item1 break__word"><span>better &nbsp;</span><span>than</span></div>
                         <div className="item2">
                             <img src="/three.png" />
                         </div>

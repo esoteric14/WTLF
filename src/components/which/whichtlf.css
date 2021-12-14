@@ -190,9 +190,9 @@
 }
 
 @media (max-width: 600px) {
-  .header__tag {
+  /* .header__tag {
     display: none;
-  }
+  } */
   .which_tlf {
     margin: 0;
   }
