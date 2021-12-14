@@ -14,7 +14,7 @@ const Whichtlf = () => {
       redirect: 'follow'
     };
     
-    fetch(`http://api.whythelongface.club/rarity?prop=${rarity}`, requestOptions)
+    fetch(`//api.whythelongface.club/rarity?prop=${rarity}`, requestOptions)
       .then(response => response.json())
       .then(result => {
         setRarityData(result[0]);
@@ -31,7 +31,7 @@ const Whichtlf = () => {
       redirect: 'follow'
     };
 
-    fetch(`http://api.whythelongface.club/faces?face=${page}`, requestOptions)
+    fetch(`//api.whythelongface.club/faces?face=${page}`, requestOptions)
       .then(response => response.json())
       .then(result => setData(result[0]))
       .catch(error => console.log('error', error));
@@ -54,7 +54,7 @@ const Whichtlf = () => {
               {data.AvatarName}
             </h2>
             <div className="opensea_link">
-              <b className="hide">|</b> <Link to="http://opensea.io/collection/wtlf" className="hide">OpenSea</Link>
+              <b className="hide">|</b> <Link to="//opensea.io/collection/wtlf" className="hide">OpenSea</Link>
               <div className="btns item__grow_1_mobile">
                 <button
                   onClick={() => {
