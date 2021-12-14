@@ -107,6 +107,7 @@ body{
 }
 .flex h2 {
   margin: 0;
+  font-weight: 300;
 }
 .info p {
   margin-bottom: 0;
@@ -210,7 +211,7 @@ body{
   }
   .item img {
     object-fit: contain;
-    width: 44%;
+    width: 80%;
     margin-left: 5px;
   }
   .info {
@@ -235,6 +236,9 @@ body{
   }
   .action {
     max-width: 100%;
+  }
+  .info-box{
+    justify-content: center;
   }
 }
 @media (min-width: 1441px) {

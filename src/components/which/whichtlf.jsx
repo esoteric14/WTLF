@@ -49,7 +49,7 @@ const Whichtlf = () => {
           <h5 className="hide">
             <span className="red_circle"></span>sold
           </h5>
-          <div className="flex">
+          <div className="info-box flex">
             <h2 style={{ marginRight: "20px" }}>
               {data.AvatarName}
             </h2>
