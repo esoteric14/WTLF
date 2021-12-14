@@ -5,16 +5,17 @@
   flex-wrap: wrap;
   margin: 2% 30px;
 }
-.red_circle{display: none;}
+.red_circle {
+  display: none;
+}
 @media (max-width: 1180px) {
   .which_tlf {
     justify-content: center;
     /* margin-top: 20%; */
   }
-  .item-info{
+  .item-info {
     height: 65vh !important;
   }
-
 }
 
 .which_tlf .item {
@@ -25,14 +26,14 @@
   justify-content: center;
   align-items: center;
 }
-.item-frame>img{
+.item-frame > img {
   height: 400px;
-    width: 400px;
+  width: 400px;
   margin-left: 10px;
 }
 
 .info {
-  padding: 10px 0 10px 45px;
+  padding: 40px;
   border: 1px solid #dbdbdb;
   box-sizing: border-box;
   border-radius: 12px;
@@ -67,8 +68,8 @@
 .item__grow_3 {
   flex-grow: 3;
 }
-.item-frame{
-  background: url('../../assets/frame.svg')no-repeat;
+.item-frame {
+  background: url("../../assets/frame.svg") no-repeat;
   background-position: center;
   background-size: cover;
   background-color: #ffe;
@@ -142,10 +143,10 @@
   height: 250px;
   object-fit: cover;
 }
-.modal__img>img{
-    height: 250px;
-    width: 250px;
-    border-radius: 54px;
+.modal__img > img {
+  height: 250px;
+  width: 250px;
+  border-radius: 54px;
 }
 .modal__info {
   height: 250px;
@@ -189,23 +190,37 @@
 }
 
 @media (max-width: 600px) {
+  .header__tag {
+    display: none;
+  }
   .which_tlf {
-    margin-top: 30%;
+    margin: 0;
   }
   .which_tlf .item {
     width: 100%;
     height: fit-content;
     background-size: contain;
     background-color: transparent;
+    justify-content: flex-start;
   }
   .item img {
     object-fit: contain;
-    width: 65%;
+    width: 44%;
     margin-left: 5px;
   }
   .info {
     width: 100%;
     border: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: auto;
+  }
+  img.frame {
+    width: 240px;
+  }
+  .opensea_link {
+    display: flex;
+    align-items: center;
   }
   .item__grow_1 {
     display: none;
@@ -217,8 +232,26 @@
     max-width: 100%;
   }
 }
-@media (min-width:1441px) {
-    .which_tlf{
-      width: 80vw;
-    }
+@media (min-width: 1441px) {
+  .which_tlf {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 320px) {
+  img.frame {
+    width: 190px;
+  }
+}
+
+
+@media (max-width: 425px) {
+  img.frame {
+    width: 238px;
+    margin-left: 8px;
+  }
+  .search_container {
+    width: 90%;
+    margin: 0 15px;
+}
 }

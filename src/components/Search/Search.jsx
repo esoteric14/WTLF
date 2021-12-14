@@ -4,7 +4,7 @@ import './Search.css';
 const Search = ({ setPage }) => {
     const [value, setValue] = useState('');
     const handleChange = (event) => {
-        setValue(event.target.value);
+        setValue(Number(event.target.value));
     }
     const handleClick = () => {
         setPage(value);

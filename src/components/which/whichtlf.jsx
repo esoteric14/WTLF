@@ -46,14 +46,14 @@ const Whichtlf = () => {
       </div>
       <div className="item item-info">
         <div className="info">
-          <h5>
+          <h5 className="hide">
             <span className="red_circle"></span>sold
           </h5>
           <div className="flex">
             <h2 style={{ marginRight: "20px" }}>
               {data.AvatarName}
             </h2>
-            <div>
+            <div className="opensea_link">
               <b className="hide">|</b> <Link to="http://opensea.io/collection/wtlf" className="hide">OpenSea</Link>
               <div className="btns item__grow_1_mobile">
                 <button
