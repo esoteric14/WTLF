@@ -14,9 +14,9 @@ const Header = () => {
             <nav className={dropdownOpen ? 'fixedNav' : 'normalNav'}>
                 <h3><Link to="/" className="link-menu">WTLF.club</Link></h3>
                 <ul className="non-burger">
-                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/"> <li>WhatTLF<span>?</span></li></NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhoTLF"> <li>WhoTLF<span>?</span></li></NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhichTLF"> <li>WhichTLF<span>?</span></li></NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/"> <li>WhatTLF</li></NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhichTLF"> <li>WhichTLF</li></NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhoTLF"> <li>WhoTLF</li></NavLink>
                 </ul>
                 <div className="hamburger" onClick={displaynav}>
                     <div className="burger ham1"></div>
@@ -27,9 +27,10 @@ const Header = () => {
             <div className={dropdownOpen ? 'dropActive' : 'dropInactive'}>
               <div className="dropDown">
                   <ul className="burgerdropDown">
-                      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/"> <li onClick={displaynav}>WhatTLF<span>?</span></li></NavLink>
-                      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhoTLF"> <li onClick={displaynav}>WhoTLF<span>?</span></li></NavLink>
-                      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhichTLF"> <li onClick={displaynav}>WhichTLF<span>?</span></li></NavLink>
+                      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/"> <li onClick={displaynav}>WhatTLF</li></NavLink>
+                      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhichTLF"> <li onClick={displaynav}>WhichTLF</li></NavLink>
+                      <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} className="link-menu" to="/WhoTLF"> <li onClick={displaynav}>WhoTLF</li></NavLink>
+                     
                   </ul>
               </div>
             </div>
