@@ -1,0 +1,22 @@
+.wtlf{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40vh;
+}
+
+.link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.list{
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
