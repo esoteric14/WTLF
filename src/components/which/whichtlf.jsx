@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Search from "../Search/Search";
 import "./whichtlf.css";
-import { Link } from "react-router-dom";
+
 const Modal = ({ isOpen, setIsOpen, data, rarityData }) => {
+  let navigation = useNavigate();
   const ref = useRef(null);
   const resetBodyStyle = () => {
     const body = document.getElementsByTagName("body")[0];
@@ -18,25 +21,6 @@ const Modal = ({ isOpen, setIsOpen, data, rarityData }) => {
     resetBodyStyle();
     setIsOpen((_) => false);
   };
-  // useEffect(() => {
-  //   /**
-  //    * Alert if clicked on outside of element
-  //    */
-  // function handleClickOutside(event) {
-
-  // }
-  // Bind the event listener
-  // document.addEventListener("mousedown", handleClickOutside);
-  // return () => {
-  //   // Unbind the event listener on clean up
-  //   document.removeEventListener("mousedown", handleClickOutside);
-  // };
-  // }, [ref]);
-  // if (!event.target.contains(ref.current)) {
-  //   resetBodyStyle();
-  //   setIsOpen((_) => false);
-  // }
-  // };
 
   if (isOpen) {
     document.addEventListener("click", handleClickOutside, false);
@@ -47,6 +31,11 @@ const Modal = ({ isOpen, setIsOpen, data, rarityData }) => {
   } else {
     document.removeEventListener("click", handleClickOutside, false);
   }
+
+  const handleBtnClick = (_) => {
+    resetBodyStyle();
+    navigation("/WTLF");
+  };
 
   return (
     <div
@@ -64,7 +53,9 @@ const Modal = ({ isOpen, setIsOpen, data, rarityData }) => {
               <p>Rarity Grade: {rarityData.rarityGrade}</p>
               <p>occurence: {rarityData.Count}/10000</p>
             </div>
-            <button className="modal__btn">WTLF's</button>
+            <button className="modal__btn" onClick={handleBtnClick}>
+              WTLF's
+            </button>
           </div>
         </div>
         <div className="cross" title="Close" onClick={handleClose}>
@@ -76,7 +67,7 @@ const Modal = ({ isOpen, setIsOpen, data, rarityData }) => {
 };
 const Whichtlf = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(Math.floor(1 + Math.random() * 10000));
   const [data, setData] = useState({});
   const [rarityData, setRarityData] = useState({});
   const [error, setError] = useState("");
