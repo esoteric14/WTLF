@@ -54,34 +54,46 @@ const Index = () => {
                     </div>
                 </div>
             </section>
-            <section className="beta">
-                <div className="beta-wrapper">
-                    <div className="hero">
-                        <div className="title red">Why is</div>
-                        <div className="item2">
-                            <img src="/two.png" />
+
+            <section className="beta-container">
+                <div className="beta">
+                    <div className="beta-wrapper">
+                        <div className="hero">
+                            <div className="title red">Why is</div>
+                            <div className="item2">
+                                <img src="/two.png" />
+                            </div>
+                        </div>
+                        <div className="hero">
+                            <div className="title yellow item1 break__word"><span>better &nbsp;</span><span>than</span></div>
+                            <div className="item2">
+                                <img src="/three.png" />
+                            </div>
+                            <div className="title yellow item3 hide-sm item-ques">?</div>
+                        </div>
+                        <div className="description">
+                            <h4 className="fontW-700">
+                                The higher the grade, the rarer the asset!
+                            </h4>
+                            <p>
+                                Every element is picked randomly to create unique characters. However some characters have rarer elements than others (a Japanese Lacquered Comb above versus cornrows below). Naturally this has an effect on the price of the WTLF.
+                            </p>
+                            <p>
+                                Check out the grade bands for elemental rarity below.
+                            </p>
                         </div>
                     </div>
-                    <div className="hero">
-                        <div className="title yellow item1 break__word"><span>better &nbsp;</span><span>than</span></div>
-                        <div className="item2">
-                            <img src="/three.png" />
-                        </div>
-                        <div className="title yellow item3 hide-sm item-ques">?</div>
+
+                    <div className="grading_band desktop">
+                        <img src='/gradingBand.png'/>
                     </div>
-                    <div className="description">
-                        <h4 className="fontW-700">
-                            The higher the grade, the rarer the asset!
-                        </h4>
-                        <p>
-                            Every element is picked randomly to create unique characters. However some characters have rarer elements than others (a Japanese Lacquered Comb above versus cornrows below). Naturally this has an effect on the price of the WTLF.
-                        </p>
-                        <p>
-                            Check out the grade bands for elemental rarity below.
-                        </p>
-                    </div>
+                    
+                </div>
+                <div className="grading_band mob">
+                        <img src='/gradingBand.png'/>
                 </div>
             </section>
+
             <section  className="container gamma">
                 <div className="gamma__content">
                     <h2>Elemental rarity grades</h2>
@@ -93,7 +105,7 @@ const Index = () => {
                 <div className="gamma_info">
                     <div className="gamma_info_item">
                         <div className="gamma-img-container">
-                            <img src="/headExplode.gif" alt="head-explode" />
+                            <img src="/Head-Explode-v2.gif" alt="head-explode" />
                         </div>
                         <div className="gamma-show-md">
                             <p>Every WTLF is made up of many different elements. And each element occurs in different numbers... some rarer than others. Be it a set of eyelashes, or a vintage t-shirt or one of the many fancy backgrounds, everything has a grade.</p>
@@ -134,6 +146,8 @@ const Index = () => {
                     </div>
                 </div>
             </section>
+            {/* <div className="text"><p>(All occurences are out of 10,000)</p></div> */}
+           
         </>
     )
 };
