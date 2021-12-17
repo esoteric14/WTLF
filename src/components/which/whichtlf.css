@@ -2,19 +2,27 @@ body {
   position: relative;
 }
 .which_tlf {
-  display: flex;
-  justify-content: space-around;
+  display: inline-flex;
+  column-gap: 6rem;
+  justify-content: center;
+  width: calc(100% - 80px);
   position: relative;
   flex-wrap: wrap;
+  align-items: self-end;
   margin: 2% 30px;
+  margin-top: 5rem;
 }
 .red_circle {
   display: none;
 }
+.error {
+  color: #ff0000;
+  font-size: 12px;
+  padding: 10px 20px;
+}
 @media (max-width: 1180px) {
   .which_tlf {
     justify-content: center;
-    /* margin-top: 20%; */
   }
   .item-info {
     height: 65vh !important;
@@ -24,18 +32,26 @@ body {
 .which_tlf .item {
   display: flex;
   flex-direction: column;
-  width: 650px;
-  height: 650px;
+  width: 450px;
+  height: 450px;
   justify-content: center;
   align-items: center;
 }
+
 .item-frame > img {
-  height: 400px;
-  width: 400px;
-  margin-left: 10px;
+  height: 250px;
+  width: 250px;
+  margin-left: 8px;
+  background-image: url("../../assets/frame.svg");
+  background-repeat: no-repeat;
+  padding: 6rem;
+  background-size: contain;
 }
 
 .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   padding: 40px;
   border: 1px solid #dbdbdb;
   box-sizing: border-box;
@@ -71,12 +87,12 @@ body {
 .item__grow_3 {
   flex-grow: 3;
 }
-.item-frame {
-  background: url("../../assets/frame.svg") no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-color: #ffe;
-  margin: 0 auto;
+.frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: inherit;
 }
 /* img.frame {
   -o-border-image: url("/frame.svg") 93 92 87 92 stretch stretch;
@@ -208,9 +224,10 @@ body {
   } */
   .which_tlf {
     margin: 0;
+    width: auto;
   }
   .which_tlf .item {
-    width: 100%;
+    /* width: 100%; */
     height: fit-content;
     background-size: contain;
     background-color: transparent;
@@ -229,7 +246,9 @@ body {
     height: auto;
   }
   img.frame {
-    width: 240px;
+    height: 160px;
+    width: 160px;
+    padding: 5rem;
   }
   .opensea_link {
     display: flex;
@@ -250,7 +269,7 @@ body {
 }
 @media (min-width: 1441px) {
   .which_tlf {
-    width: 80vw;
+    /* width: 80vw; */
   }
 }
 
@@ -260,16 +279,11 @@ body {
     /* padding: 40px; */
   }
 }
-@media (max-width: 320px) {
-  img.frame {
-    width: 190px;
-  }
-}
 
 @media (max-width: 425px) {
   img.frame {
-    width: 238px;
-    margin-left: 8px;
+    margin: 0;
+    padding: 4rem;
   }
   .search_container {
     width: 90%;

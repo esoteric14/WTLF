@@ -79,6 +79,7 @@ const Whichtlf = () => {
   const [page, setPage] = useState(1);
   const [data, setData] = useState({});
   const [rarityData, setRarityData] = useState({});
+  const [error, setError] = useState("");
   const getRarity = (rarity) => {
     var requestOptions = {
       method: "GET",
@@ -88,8 +89,15 @@ const Whichtlf = () => {
     fetch(`//api.whythelongface.club/rarity?prop=${rarity}`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
-        setRarityData(result[0]);
-        setIsOpen(true);
+        if (result.length > 0) {
+          setRarityData(result[0]);
+          setIsOpen(true);
+          if (error.length > 0) {
+            setError((_) => "");
+          }
+        } else {
+          setError((_) => "Unable to find data");
+        }
       })
       .catch((error) => console.log("error", error));
   };
@@ -104,7 +112,16 @@ const Whichtlf = () => {
 
     fetch(`//api.whythelongface.club/faces?face=${page}`, requestOptions)
       .then((response) => response.json())
-      .then((result) => setData(result[0]))
+      .then((result) => {
+        if (result.length > 0) {
+          setData(result[0]);
+          if (error.length > 0) {
+            setError((_) => "");
+          }
+        } else {
+          setError((_) => "Unable to fetch");
+        }
+      })
       .catch((error) => console.log("error", error));
   }, [page]);
   return (
@@ -190,6 +207,7 @@ const Whichtlf = () => {
           </div>
           <div className="search item__grow_3">
             <Search setPage={setPage} />
+            {error.length > 0 ? <span className="error">{error}</span> : null}
           </div>
         </div>
       </div>
