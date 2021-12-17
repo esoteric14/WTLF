@@ -1,7 +1,7 @@
 import React from "react";
 import './index.css';
 
-const links = new Array(20).fill('#link')
+const links = new Array(200).fill('#link')
 
 const WTLF = () => {
     return (
