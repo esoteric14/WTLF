@@ -25,7 +25,7 @@ const Header = () => {
           >
             {" "}
             <li>
-              WhatTLF<span>?</span>
+              WhatTLF
             </li>
           </NavLink>
           <NavLink
@@ -35,7 +35,7 @@ const Header = () => {
           >
             {" "}
             <li>
-              WhichTLF<span>?</span>
+              WhichTLF
             </li>
           </NavLink>
           <NavLink
@@ -45,7 +45,7 @@ const Header = () => {
           >
             {" "}
             <li>
-              WhoTLF<span>?</span>
+              WhoTLF
             </li>
           </NavLink>
         </ul>
@@ -65,7 +65,7 @@ const Header = () => {
             >
               {" "}
               <li onClick={displaynav}>
-                WhatTLF<span>?</span>
+                WhatTLF
               </li>
             </NavLink>
             <NavLink
@@ -75,7 +75,7 @@ const Header = () => {
             >
               {" "}
               <li onClick={displaynav}>
-                WhichTLF<span>?</span>
+                WhichTLF
               </li>
             </NavLink>
             <NavLink
@@ -85,7 +85,7 @@ const Header = () => {
             >
               {" "}
               <li onClick={displaynav}>
-                WhoTLF<span>?</span>
+                WhoTLF
               </li>
             </NavLink>
           </ul>
