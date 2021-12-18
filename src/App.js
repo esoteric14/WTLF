@@ -6,6 +6,7 @@ import Whotlf from "./components/who/whotlf";
 import Whichtlf from "./components/which/whichtlf";
 import { Routes, Route } from "react-router-dom";
 import Index from "./components/index";
+import WTLF from "./components/WTLF";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/WhatTLF" element={<Index />} />
           <Route path="/WhoTLF" element={<Whotlf />} />
           <Route path="/WhichTLF" element={<Whichtlf />} />
+          <Route path="/WTLF" element={<WTLF />} />
         </Routes>
         <Footer />
       </div>
