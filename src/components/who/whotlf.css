@@ -142,10 +142,10 @@
     position: absolute;
     display: flex;
     width: 90vw;
+    /* background-color: black; */
   }
   .black-area-close {
     width: 100%;
-    background-color: black;
   }
 }
 
@@ -153,7 +153,7 @@
   .image-container {
     margin: 20px 10px 0 10px;
   }
-  .text-between-images{
+  .text-between-images {
     max-height: 308px;
     padding: 0 0 0 30px;
     overflow-x: hidden;

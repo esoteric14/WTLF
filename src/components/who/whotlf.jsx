@@ -19,16 +19,26 @@ const ShortText = (props) => {
 const Whotlf = () => {
   const [reveal, setReveal] = useState(false);
   const [expand, setExpand] = useState(false);
+  const [width, setWidth] = useState(0);
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    const updateSize = () => {
+      setWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
   useEffect(() => {
     const timer = setTimeout(() => setExpand(true), 1000);
     return () => clearTimeout(timer);
   }, []);
   return (
-    <div className="who-tlf" onClick={(event) => {
-      if(!event.target.classList.contains('side-img') && reveal){
-        setReveal(false)
-      }
-    }}>
+    <div
+      className="who-tlf"
+      onClick={() => {
+        if (width <= 768) setReveal(false);
+      }}
+    >
       <ShortText superClass="desktop">
         <Fade right when={reveal}>
           <img src={painting} alt="" className="fade-image side-img" />
@@ -42,17 +52,42 @@ const Whotlf = () => {
         >
           <p>
             When
-            <span className="logicbomb" onClick={() => {
-              console.log('hi you');
-              setReveal(true)
-              }}>
+            <span
+              className="logicbomb"
+              onClick={(e) => {
+                if (width <= 768) {
+                  setReveal(true);
+                  e.stopPropagation();
+                }
+              }}
+              onMouseEnter={() => {
+                if (width > 768) setReveal(true);
+              }}
+              onMouseLeave={() => {
+                if (width > 768) setReveal(false);
+              }}
+            >
               {" "}
               //logikbomb
             </span>{" "}
             asked
           </p>
           <p>
-            <span className="partmeister" onClick={() => setReveal(true)}>
+            <span
+              className="partmeister"
+              onClick={(e) => {
+                if (width <= 768) {
+                  setReveal(true);
+                  e.stopPropagation();
+                }
+              }}
+              onMouseEnter={() => {
+                if (width > 768) setReveal(true);
+              }}
+              onMouseLeave={() => {
+                if (width > 768) setReveal(false);
+              }}
+            >
               //partmeister
             </span>{" "}
             this rather innocuous question, back
@@ -66,7 +101,10 @@ const Whotlf = () => {
           <p>the WTLF project</p>
           <Fade right when={reveal}>
             <div className="mobile-img-wrapper">
-              <div className="flex-container" style={{display:reveal?'block':'none'}}>
+              <div
+                className="flex-container"
+                style={{ display: reveal ? "flex" : "none" }}
+              >
                 <img src={painting} alt="" className="fade-image-mobile" />
                 {/* <div className="black-area-close"></div> */}
               </div>
