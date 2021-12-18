@@ -3,13 +3,13 @@ body {
 }
 .which_tlf {
   display: inline-flex;
-  column-gap: 6rem;
+  column-gap: 2rem;
   justify-content: center;
-  width: calc(100% - 80px);
+  width: 100%;
   position: relative;
   flex-wrap: wrap;
   align-items: self-end;
-  margin: 2% 30px;
+  /* margin: 2% 30px; */
   margin-top: 5rem;
 }
 .red_circle {
@@ -32,7 +32,7 @@ body {
 .which_tlf .item {
   display: flex;
   flex-direction: column;
-  width: 450px;
+  width: auto;
   height: 450px;
   justify-content: center;
   align-items: center;
@@ -61,6 +61,7 @@ body {
   margin-bottom: 35px;
   width: 545px;
   height: 280px;
+  margin-top: 6rem;
 }
 
 .btns button {
@@ -76,7 +77,8 @@ body {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-  width: 555px;
+  max-width: 555px;
+  width: 100%;
 }
 .item__grow_1 {
   flex-grow: 1;
@@ -223,7 +225,7 @@ body {
     display: none;
   } */
   .which_tlf {
-    margin: 0;
+    margin-top: 2rem;
     width: auto;
   }
   .which_tlf .item {
@@ -281,12 +283,15 @@ body {
 }
 
 @media (max-width: 425px) {
+  .which_tlf {
+    width: 100%;
+  }
   img.frame {
     margin: 0;
     padding: 4rem;
   }
   .search_container {
     width: 90%;
-    margin: 0 15px;
+    /* margin: 0 15px; */
   }
 }

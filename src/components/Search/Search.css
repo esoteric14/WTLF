@@ -10,15 +10,15 @@
 }
 @media (max-width: 600px) {
   .search_container {
-    width: calc(100% - 60px);
-    margin: 0 30px;
+    /* width: calc(100% - 60px); */
+    margin: 0 auto;
   }
 }
 
 .search_container #search_face {
   border: none;
   outline: none;
-  width: 80%;
+  width: 100%;
   font-family: Open Sans;
   font-style: italic;
   font-weight: normal;
