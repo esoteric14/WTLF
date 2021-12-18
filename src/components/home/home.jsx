@@ -45,7 +45,7 @@ const Home = () => {
               <h1 className="red">why is </h1>
             </div>
             <div className="img sz35">
-              <img src="/two.png" />
+              <img src="/two.png" alt=""/>
             </div>
             <div className="space sz30"></div>
           </div>
@@ -55,7 +55,7 @@ const Home = () => {
               <h1 className="yellow">better than </h1>
             </div>
             <div className="img sz35">
-              <img src="/three.png" />
+              <img src="/three.png" alt=""/>
             </div>
             <div className="title sz10">
               <h1 className="yellow">?</h1>
@@ -97,7 +97,7 @@ const Home = () => {
 
           <div className="flex grades-grid">
             <div className="left sz35">
-              <img src={four}></img>
+              <img src={four} alt="" />
             </div>
             <div className="right sz35">
               <div className="lists">

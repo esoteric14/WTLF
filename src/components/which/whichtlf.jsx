@@ -188,7 +188,7 @@ const Whichtlf = () => {
             </button>
             <button
               onClick={() => {
-                if (page < 1000) {
+                if (page < 10000) {
                   setPage(page + 1);
                 }
               }}

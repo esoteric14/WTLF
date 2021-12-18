@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
-import Home from "./components/home/home";
+// import Home from "./components/home/home";
 import Whotlf from "./components/who/whotlf";
 import Whichtlf from "./components/which/whichtlf";
 import { Routes, Route } from "react-router-dom";
