@@ -1,4 +1,5 @@
 import React from "react";
+import Graph from "../graph";
 import './index.css';
 
 const Index = () => {
@@ -61,12 +62,14 @@ const Index = () => {
                     </div>
 
                     <div className="grading_band desktop">
-                        <img src='/gradingBand.png' alt=""/>
+                        {/* <img src='/gradingBand.png' alt=""/> */}
+                        <Graph/>
                     </div>
                     
                 </div>
                 <div className="grading_band mob">
-                        <img src='/gradingBand.png' alt=""/>
+                        {/* <img src='/gradingBand.png' alt=""/> */}
+                        <Graph/>
                 </div>
             </section>
 

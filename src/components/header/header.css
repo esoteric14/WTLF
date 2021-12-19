@@ -153,14 +153,14 @@ nav li:hover,
   display: none;
 }
 .burgerdropDown {
-  z-index: 10000;
-  width: 80%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-top: 20%;
 }
 .burgerdropDown li {
   color: #fff;

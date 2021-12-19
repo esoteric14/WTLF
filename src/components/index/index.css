@@ -199,14 +199,14 @@ a.active > li > span {
 .beta .description > * {
   margin: 10%;
 }
-.img-mob-view > img {
+.img-mob-view > * {
   width: 250px;
   height: 100%;
   display: none;
 }
-.grading_band>img{
-  width: 314px;
-  height: 319px;
+.grading_band>*{
+  /* width: 314px;
+  height: 319px; */
   margin: 10px;
 }
 @media screen and (max-width: 980px) {
@@ -537,7 +537,7 @@ ul {
     width: 260px;
     height: 270px;
   }
-  .grading_band img{
+  .grading_band>*{
     width: 280px;
     height: 270px;
     margin-left: -25px;
@@ -593,4 +593,7 @@ ul {
 }
 .text p{
   padding: 0px 15%;
+}
+.recharts-wrapper{
+  background-color: #ffffff;
 }
