@@ -5,7 +5,7 @@ const footer = () => {
   return (
     <div className="pad-left-right">
       <div className="footer-wrapper">
-        <div className="svg-container"></div>
+      <a href="https://roguescollective.com" target="_blank"> <div className="svg-container"></div></a>
       </div>
     </div>
   );

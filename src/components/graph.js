@@ -30,7 +30,7 @@ const Graph = () => {
       };
       const renderCustomizedLabelB = (props) => {
         const { content, ...rest } = props;
-        return <Label {...rest} value={"Grade B - Awesome 3186"} position="insideBottomLeft" fontSize="8" width="400" fill="#45e1db" fontWeight="Bold" dx={-15} dy={5} />;
+        return <Label {...rest} value={"Grade B - Awesome (3186)"} position="insideBottomLeft" fontSize="8" width="400" fill="#45e1db" fontWeight="Bold" dx={-15} dy={5} />;
       };
       const renderCustomizedLabelC = (props) => {
         const { content, ...rest } = props;

@@ -27,11 +27,13 @@
 }
 .text-container p {
   color: #8a8a8a;
-  font-size: 75px;
-  font-weight: 300;
-  text-align: right;
-  font-family: "Open Sans";
-  margin: 0;
+    font-size: 60px;
+    font-weight: 300;
+    text-align: right;
+    font-family: "Open Sans";
+    margin: 0;
+    margin-top: 35px;
+    line-height: 65px;
 }
 .text-container.desktop {
   display: block;
