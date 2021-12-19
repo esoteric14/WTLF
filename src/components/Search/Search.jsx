@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "./Search.css";
 
-const Search = ({ setPage }) => {
+const Search = ({ setPage, setIsLoading}) => {
   const [value, setValue] = useState("");
   const handleChange = (event) => {
     setValue(Number(event.target.value));
   };
   const handleClick = () => {
+    setIsLoading(true)
     setPage(value);
   };
 
