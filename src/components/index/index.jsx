@@ -77,11 +77,10 @@ const Index = () => {
 
             <section className="container gamma">
                 <div className="gamma__content">
-                    <h2>Elemental rarity grades</h2>
+                    <h2>elemental rarity levels</h2>
                     <div className="gamma-hide-md">
-                        <p>Every element is picked randomly to create each unique character. Some characters have more rarer elements than others (“Camo Eyepatch” is a Level S element, as is the background. Below, the rarest element are his languid teal eyes, believe it or not ;). Elemental levels are calculated on a maximum occurence of 10,000.</p>
-                        <p>Adding up the rarity of the different elements gives each character a total Grade (C, B, A, S & X - lowest to highest), which naturally has an impact on the price potential.</p>
-                        <p>That’s why the one above is more likely better than the one below.</p>
+                        <p>Every WTLF is made up of many different elements. And each element occurs in different numbers... some rarer than others. Be it a set of eyelashes, or a vintage t-shirt or one of the many fancy backgrounds, everything has a grade.</p>
+                        <p>The rarest of the rare are the “S-Class” and and the most common is “G-Class”. Each element gets a grade and when they are added together, you get the <u>over all WTLF grade.</u> So a WTLF with more  rare elements is more likely to be a higher grade WTLF.</p>
                     </div>
                 </div>
                 <div className="gamma_info">
@@ -122,6 +121,9 @@ const Index = () => {
                         <div className="gamma__list" style={{ marginTop: '20px', paddingLeft: '10px' }}><p>(All Occurences are out of 10,000)</p></div>
                     </div>
                 </div>
+            </section>
+            <section className="wtlf__message">
+                <h2>collect your favourite WTLFs!</h2>
             </section>
         </>
     )
