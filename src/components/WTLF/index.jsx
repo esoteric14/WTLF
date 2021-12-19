@@ -4,7 +4,7 @@ import './index.css';
 
 const getLinks = (data, handleRarestClick) => {
     const links = data.split(",");
-    return (<ul className="link">{links.map((e,index) => (<li className="list" key={e+index}><a href={e}>{e}</a></li>))}</ul>)
+    return (<>{links.map((e, index) => (<li className="list" key={e + index}><a href={e}>{e}</a></li>))}</>)
 }
 
 const WTLF = ({ rarity }) => {
@@ -31,13 +31,13 @@ const WTLF = ({ rarity }) => {
     return (
         <div className="wtlf">
             <h1>{links[0] && links[0].AvatarName}</h1>
-
-            {links.map((link) => (
+            <ul className="link">{links.map((link) => (
                 // <li className="list" key={index}>
                 //     <a href={link.mostRare}>{link.mostRare}</a>
                 // </li>
                 getLinks(link.mostRare)
             ))}
+            </ul>
 
         </div>
     )
