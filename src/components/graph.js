@@ -5,20 +5,20 @@ const Graph = () => {
     const data = [
         {
           name: "grades",
-          gradeA: 3185,
-          gradeB: 3741,
-          gradeC: 2524,
+          gradeA: 3150,
+          gradeB: 3150,
+          gradeC: 3150,
           gradeS: 500,
-          gradeX: 50,
+          gradeX: 50, 
         }
       ];  
 
       const dataLabels =[
           {
             name: "gradeValues",
-            gradeA: 3185,
-            gradeB: 3741,
-            gradeC: 2524,
+            gradeA: 3150,
+            gradeB: 3150,
+            gradeC: 3150,
             gradeS: 500,
             gradeX: 50, 
         }
@@ -26,15 +26,15 @@ const Graph = () => {
 
       const renderCustomizedLabelA = (props) => {
         const { content, ...rest } = props;
-        return <Label {...rest} value={"Grade A - Awesome (3186)"} position="insideBottomLeft" fontSize="8" width="400" fill="#57e145" fontWeight="Bold" dx={-15} dy={5} />;
+        return <Label {...rest} value={"Grade A - Awesome (3150)"} position="insideBottomLeft" fontSize="8" width="400" fill="#57e145" fontWeight="Bold" dx={-15} dy={5} />;
       };
       const renderCustomizedLabelB = (props) => {
         const { content, ...rest } = props;
-        return <Label {...rest} value={"Grade B - Awesome (3186)"} position="insideBottomLeft" fontSize="8" width="400" fill="#45e1db" fontWeight="Bold" dx={-15} dy={5} />;
+        return <Label {...rest} value={"Grade B - Awesome (3150)"} position="insideBottomLeft" fontSize="8" width="400" fill="#45e1db" fontWeight="Bold" dx={-15} dy={5} />;
       };
       const renderCustomizedLabelC = (props) => {
         const { content, ...rest } = props;
-        return <Label {...rest} value={"Grade C - Common (2524)"} position="insideBottomLeft" fontSize="8" width="400" fill="#4583e1" fontWeight="Bold" dx={-15} dy={5} />;
+        return <Label {...rest} value={"Grade C - Common (3150)"} position="insideBottomLeft" fontSize="8" width="400" fill="#4583e1" fontWeight="Bold" dx={-15} dy={5} />;
       };
       const renderCustomizedLabelS = (props) => {
         const { content, ...rest } = props;
@@ -59,7 +59,7 @@ const Graph = () => {
              }}
             //  barSize={50}
             >
-            <Tooltip/>
+            {/* <Tooltip/> */}
             <Bar dataKey="gradeA" stackId="a" fill="#57e145"></Bar>
             <Bar dataKey="gradeB" stackId="a" fill="#45e1db"></Bar>
             <Bar dataKey="gradeC" stackId="a" fill="#4583e1"></Bar>
@@ -81,35 +81,30 @@ const Graph = () => {
             <Bar dataKey="gradeA" stackId="a" fill="#ffffff">
             <LabelList
                 dataKey="gradeA"
-                // position="outsideRight"
                 content={renderCustomizedLabelA}
               />
               </Bar>
             <Bar dataKey="gradeB" stackId="a" fill="#ffffff">
             <LabelList
                 dataKey="gradeB"
-                // position="insideBottom"
                 content={renderCustomizedLabelB}
               />
               </Bar>
             <Bar dataKey="gradeC" stackId="a" fill="#ffffff">
             <LabelList
                 dataKey="gradeC"
-                // position="insideBottom"
                 content={renderCustomizedLabelC}
               />
               </Bar>
             <Bar dataKey="gradeS" stackId="a" fill="#ffffff">
             <LabelList
                 dataKey="gradeS"
-                // position="insideBottom"
                 content={renderCustomizedLabelS}
               />
               </Bar>
             <Bar dataKey="gradeX" stackId="a" fill="#ffffff">
             <LabelList
                 dataKey="gradeX"
-                // position="insideBottom"
                 content={renderCustomizedLabelX}
               />
               </Bar>

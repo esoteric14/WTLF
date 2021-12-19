@@ -8,9 +8,9 @@ import Fade from "react-reveal/Fade";
 const ShortText = (props) => {
   return (
     <div className={`text-container mt_40 ${props.superClass}`}>
-      <p>Why </p>
+      <p>"Why </p>
       <p>the long</p>
-      <p>face?</p>
+      <p>face?"</p>
       {props.children}
     </div>
   );
@@ -96,7 +96,8 @@ const Whotlf = () => {
           <p> illustrations that proved that ‘a long face’ can be</p>
           <p> more than just one emotion. They could be cool, or</p>
           <p>cruel. Mischievous or morbid. Funny or furious.</p>
-          <p> hundreds of design re-re-re-tweaks later,</p>{" "}
+          <p>10 years, a few algos, a few more friends </p>
+          <p>and hundreds of design re-re-re-tweaks later,</p>{" "}
           <p>the Rogues Collective proudly released</p>
           <p>the WTLF project</p>
           <Fade right when={reveal}>

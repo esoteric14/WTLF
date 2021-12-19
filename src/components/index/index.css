@@ -476,7 +476,7 @@ ul {
     gap: 10px;
   }
   .gamma_info_item_data {
-    padding: 55px 35px;
+    padding: 45px 20px;
   }
   .gamma_info_item img {
     height: 360px;
@@ -513,7 +513,7 @@ ul {
   }
   .gamma_info_item_data {
     margin: 0 auto;
-    width: 76% !important;
+    width: 85% !important;
   }
   .gamma-show-md {
     display: block;
