@@ -207,7 +207,7 @@ a.active > li > span {
 .grading_band>*{
   /* width: 314px;	
   height: 319px;	 */
-  margin: 10px;	
+  /* margin: 10px;	 */
   display: flex;
 }
 @media screen and (max-width: 980px) {
