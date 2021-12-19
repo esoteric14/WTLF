@@ -1,12 +1,13 @@
-.mt_40{
+.mt_40 {
   margin-top: 40px;
 }
 
 .who-tlf {
+  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 90vh;
+  min-height: 100vh;
   position: relative;
 }
 .image-container {
@@ -27,13 +28,13 @@
 }
 .text-container p {
   color: #8a8a8a;
-    font-size: 60px;
-    font-weight: 300;
-    text-align: right;
-    font-family: "Open Sans";
-    margin: 0;
-    margin-top: 35px;
-    line-height: 65px;
+  font-size: 60px;
+  font-weight: 300;
+  text-align: right;
+  font-family: "Open Sans";
+  margin: 0;
+  margin-top: 35px;
+  line-height: 65px;
 }
 .text-container.desktop {
   display: block;
@@ -128,6 +129,7 @@
     word-wrap: normal;
     text-align: left;
     line-height: 80px;
+    margin-top: 0;
   }
   .text-container.desktop {
     display: none;
