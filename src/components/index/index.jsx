@@ -5,29 +5,29 @@ import './index.css';
 const Index = () => {
     return (
         <>
-        
+
             <section className="alpha pad-left-right">
                 <div className="title red">
                     <span>Why&nbsp;</span>
                     <span>the&nbsp;</span>
                     <span>long</span>
-                    <img className="shift-faces" src="/SpinningHeads.gif" alt=""/>
+                    <img className="shift-faces" src="/SpinningHeads.gif" alt="" />
                     <span className="question__mark">?</span>
                 </div>
                 <div className="description">
                     <div className="desc__content">
-                    <h4>
-                        “WTF is the WTLF.club?”
-                    </h4>
-                    <p>
-                        WTLF (or ‘Why The Long Face’ for the pedants) is a set of 10,000 original, unique, on-chain, algorithmically created NFT characters by the Rogues Collective.
-                    </p>
-                    <p>
-                        The characters were randomly generated & then hand-picked and graded for even more freshness and pop.
-                    </p>
-                    <p>
-                        Each has unqiue characteristics, some of which might make it rarer than others. Check out the rare feature on each WTLF, to get the rarer WTLF for yourself.
-                    </p>
+                        <h4>
+                            “WTF is the WTLF.club?”
+                        </h4>
+                        <p>
+                            WTLF (or ‘Why The Long Face’ for the pedants) is a set of 10,000 original, unique, on-chain, algorithmically created NFT characters by the Rogues Collective.
+                        </p>
+                        <p>
+                            The characters were randomly generated & then hand-picked and graded for even more freshness and pop.
+                        </p>
+                        <p>
+                            Each has unqiue characteristics, some of which might make it rarer than others. Check out the rare feature on each WTLF, to get the rarer WTLF for yourself.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -38,13 +38,13 @@ const Index = () => {
                         <div className="hero">
                             <div className="title green">Why is</div>
                             <div className="item2">
-                                <img src="/Why_Better.png" alt=""/>
+                                <img src="/Why_Better.png" alt="" />
                             </div>
                         </div>
                         <div className="hero">
                             <div className="title pink item1 break__word"><span>better </span><span>than</span></div>
                             <div className="item2">
-                                <img src="/better_than.png" alt=""/>
+                                <img src="/better_than.png" alt="" />
                             </div>
                             <div className="title pink item3 hide-sm item-ques">?</div>
                         </div>
@@ -58,22 +58,21 @@ const Index = () => {
                             <p>
                                 Check out the grade bands for elemental rarity below.
                             </p>
+
+                            <div className="grading_band mob">
+                                {/* <img src='/gradingBand.png' alt="" /> */}
+                                <Graph />
+                            </div>
+                            <div className="grading_band desktop">
+                                {/* <img src='/gradingBand.png' alt="" /> */}
+                                <Graph />
+                            </div>
                         </div>
                     </div>
-
-                    <div className="grading_band desktop">
-                        {/* <img src='/gradingBand.png' alt=""/> */}
-                        <Graph/>
-                    </div>
-                    
-                </div>
-                <div className="grading_band mob">
-                        {/* <img src='/gradingBand.png' alt=""/> */}
-                        <Graph/>
                 </div>
             </section>
 
-            <section  className="container gamma">
+            <section className="container gamma">
                 <div className="gamma__content">
                     <h2>Elemental rarity grades</h2>
                     <div className="gamma-hide-md">
@@ -116,7 +115,7 @@ const Index = () => {
                             <p><b>Grade D:&nbsp;</b>1000+ Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
-                        <div className="gamma__list" style={{marginTop: '20px', paddingLeft: '10px'}}><p>(All Occurences are out of 10,000)</p></div>
+                        <div className="gamma__list" style={{ marginTop: '20px', paddingLeft: '10px' }}><p>(All Occurences are out of 10,000)</p></div>
                     </div>
                 </div>
             </section>

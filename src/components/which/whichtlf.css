@@ -10,7 +10,7 @@ body {
   flex-wrap: wrap;
   align-items: self-end;
   /* margin: 2% 30px; */
-  margin-top: 5rem;
+  margin-top: 25vh;
 }
 .red_circle {
   display: none;
@@ -225,9 +225,9 @@ body {
 }
 
 @media (max-width: 600px) {
-  /* .header__tag {
-    display: none;
-  } */
+  .item-info{
+    height: auto !important;
+  }
   .which_tlf {
     margin-top: 2rem;
     width: auto;
@@ -273,9 +273,9 @@ body {
     justify-content: center;
   }
 }
-@media (min-width: 1441px) {
-  .which_tlf {
-    /* width: 80vw; */
+@media (min-width: 1200px) {
+  .overrideWidth{
+    max-width: 90vw;
   }
 }
 

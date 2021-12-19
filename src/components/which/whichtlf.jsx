@@ -41,7 +41,7 @@ const Modal = ({ isOpen, setIsOpen, data, rarityData }) => {
       className={isOpen ? "show modal" : "hide"}
       onClick={handleClickOutside}
     >
-      <div className="container" ref={ref}>
+      <div className="container overrideWidth" ref={ref}>
         <div className="flex content">
           <div className="modal__img">
             <img src={data.defaultPath} className="img-fluid" />
@@ -52,7 +52,7 @@ const Modal = ({ isOpen, setIsOpen, data, rarityData }) => {
               <p>Rarity Grade: {rarityData.rarityGrade}</p>
               <p>occurence: {rarityData.Count}/10000</p>
             </div>
-            <button  type="button" className="modal__btn" onClick={() => handleBtnClick(rarityData.assetName)}>
+            <button type="button" className="modal__btn" onClick={() => handleBtnClick(rarityData.assetName)}>
               WTLF's
             </button>
           </div>
@@ -69,7 +69,7 @@ const getLinks = (data, handleRarestClick) => {
   const links = data.split(",");
   return (
     <p>
-    Rarest Features: {links.map(e => (<a  className="links" href="javascript:void(0)" onClick={() => handleRarestClick(e.trim())}>{e.trim()}</a>))}
+      Rarest Features: {links.map(e => (<a className="links" href="javascript:void(0)" onClick={() => handleRarestClick(e.trim())}>{e.trim()}</a>))}
     </p>
   )
 }
@@ -106,9 +106,10 @@ const Whichtlf = () => {
     getRarity(encodeURIComponent(value));
   };
   useEffect(() => {
-    if(isLoading){
+    if (isLoading) {
       return false;
     }
+    setIsLoading(true);
     var requestOptions = {
       method: "GET",
       redirect: "follow",
@@ -117,12 +118,14 @@ const Whichtlf = () => {
     fetch(`//api.whythelongface.club/faces?face=${page}`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
+        setIsLoading(false);
         if (result.length > 0) {
           setData(result[0]);
           if (error.length > 0) {
             setError((_) => "");
           }
         } else {
+          setIsLoading(false);
           setError((_) => "Unable to fetch");
         }
       })
@@ -131,7 +134,7 @@ const Whichtlf = () => {
   return (
     <section className="which_tlf">
       <div className="item item-frame">
-        <img className="frame" src={data.defaultPath} />
+        <img className="frame" src={data.defaultPath} alt="Loading" />
       </div>
       <div className="item item-info">
         <div className="info">
@@ -167,7 +170,7 @@ const Whichtlf = () => {
               </div>
             </div>
           </div>
-          <p style={{ display: "none" }}>WTLF Grade: {}</p>
+          <p style={{ display: "none" }}>WTLF Grade: { }</p>
           <p>WTLF Percentile: {data.wtlfScore}</p>
           {data.mostRare && getLinks(data.mostRare, handleRarestClick)}
           <p>
@@ -202,7 +205,7 @@ const Whichtlf = () => {
             </button>
           </div>
           <div className="search item__grow_3">
-            <Search setPage={setPage} setIsLoading={setIsLoading}/>
+            <Search setPage={setPage} setIsLoading={setIsLoading} />
             {error.length > 0 ? <span className="error">{error}</span> : null}
           </div>
         </div>
