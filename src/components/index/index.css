@@ -1,5 +1,8 @@
 @import "../../App.css";
 
+.alpha{
+  margin-top: 40px;
+}
 .alpha .title {
   display: flex;
   justify-content: center;
@@ -17,6 +20,7 @@
 }
 .desc__content {
   width: 350px;
+  margin-top: -20px;
 }
 
 .desc__content h4,
@@ -87,7 +91,12 @@
 .red {
   color: #ff0000;
 }
-
+.green{
+  color: #A3C000;
+}
+.pink{
+  color: #f08686;
+}
 .yellow {
   color: #ffc000;
 }
@@ -136,10 +145,7 @@
   .grades-grid {
     flex-direction: column;
   }
-  /* .item2 img {
-    width: 100%;
-    height: 350px;
-  } */
+
   .ng-mr-80 {
     margin-bottom: 0;
   }
@@ -163,7 +169,7 @@ a.active > li > span {
   border-radius: 74px;
   padding: 75px 90px;
   margin: 3%;
-  
+  margin-top: 65px;
 }
 .beta{
   display: flex;
@@ -179,7 +185,7 @@ a.active > li > span {
 
 .beta .hero:nth-child(2) {
   align-items: flex-start;
-  margin-bottom: -90px;
+  margin-bottom: -70px;
 }
 
 .beta .item2 img {

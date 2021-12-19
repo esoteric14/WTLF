@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.css";
-import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 
 const Header = () => {
@@ -19,31 +18,25 @@ const Header = () => {
         </h3>
         <ul className="non-burger">
           <NavLink
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
-            className="link-menu"
+            className={({ isActive }) => (isActive ? "active link-menu" : "inactive link-menu")}
             to="/"
           >
-            {" "}
             <li>
               WhatTLF
             </li>
           </NavLink>
           <NavLink
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
-            className="link-menu"
+            className={({ isActive }) => (isActive ? "active link-menu" : "inactive link-menu")}
             to="/WhichTLF"
           >
-            {" "}
             <li>
               WhichTLF
             </li>
           </NavLink>
           <NavLink
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
-            className="link-menu"
+            className={({ isActive }) => (isActive ? "active link-menu" : "inactive link-menu")}
             to="/WhoTLF"
           >
-            {" "}
             <li>
               WhoTLF
             </li>
@@ -59,31 +52,25 @@ const Header = () => {
         <div className="dropDown">
           <ul className="burgerdropDown">
             <NavLink
-              className={({ isActive }) => (isActive ? "active" : "inactive")}
-              className="link-menu"
+              className={({ isActive }) => (isActive ? "active link-menu" : "inactive link-menu")}
               to="/"
             >
-              {" "}
               <li onClick={displaynav}>
                 WhatTLF
               </li>
             </NavLink>
             <NavLink
-              className={({ isActive }) => (isActive ? "active" : "inactive")}
-              className="link-menu"
+              className={({ isActive }) => (isActive ? "active link-menu" : "inactive link-menu")}
               to="/WhichTLF"
             >
-              {" "}
               <li onClick={displaynav}>
                 WhichTLF
               </li>
             </NavLink>
             <NavLink
-              className={({ isActive }) => (isActive ? "active" : "inactive")}
-              className="link-menu"
+              className={({ isActive }) => (isActive ? "active link-menu" : "inactive link-menu")}
               to="/WhoTLF"
             >
-              {" "}
               <li onClick={displaynav}>
                 WhoTLF
               </li>

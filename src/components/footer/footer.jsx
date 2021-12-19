@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../../assets/footer.svg";
 import "./footer.css";
 
 const footer = () => {

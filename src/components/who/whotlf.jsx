@@ -7,10 +7,10 @@ import Fade from "react-reveal/Fade";
 
 const ShortText = (props) => {
   return (
-    <div className={`text-container ${props.superClass}`}>
-      <p>"Why </p>
+    <div className={`text-container mt_40 ${props.superClass}`}>
+      <p>Why </p>
       <p>the long</p>
-      <p>face"</p>
+      <p>face?</p>
       {props.children}
     </div>
   );

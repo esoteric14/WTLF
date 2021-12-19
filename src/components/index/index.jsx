@@ -4,37 +4,13 @@ import './index.css';
 const Index = () => {
     return (
         <>
-            {/* <section className="pad-left-right first-section">
-                <div className="title red ">Why</div>
-                <div className="">
-                    <div className="title red">the long
-                        <div className="first-section-desc">
-                            <h4>
-                                “WTF is the WTLF.club?”
-                            </h4>
-                            <p>
-                                WTLF (or ‘Why The Long Face’ for the pedants) is a set of 10,000 original, unique, on-chain, algorithmically created NFT characters by the Rogues Collective.
-                            </p>
-                            <p>
-                                The characters were randomly generated & then hand-picked and graded for even more freshness and pop.
-                            </p>
-                            <p>
-                                Each has unqiue characteristics, some of which might make it rarer than others. Check out the rare feature on each WTLF, to get the rarer WTLF for yourself.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div className="sib-flex">
-                    <img src="/SpinningHeads.gif" />
-                    <span className="title red hide-sm">?</span>
-                </div>
-            </section> */}
+        
             <section className="alpha pad-left-right">
                 <div className="title red">
                     <span>Why&nbsp;</span>
                     <span>the&nbsp;</span>
-                    <span>long&nbsp;</span>
-                    <img class="shift-faces" src="/SpinningHeads.gif" />
+                    <span>long</span>
+                    <img className="shift-faces" src="/SpinningHeads.gif" alt=""/>
                     <span className="question__mark">?</span>
                 </div>
                 <div className="description">
@@ -59,17 +35,17 @@ const Index = () => {
                 <div className="beta">
                     <div className="beta-wrapper">
                         <div className="hero">
-                            <div className="title red">Why is</div>
+                            <div className="title green">Why is</div>
                             <div className="item2">
-                                <img src="/two.png" />
+                                <img src="/Why_Better.png" alt=""/>
                             </div>
                         </div>
                         <div className="hero">
-                            <div className="title yellow item1 break__word"><span>better &nbsp;</span><span>than</span></div>
+                            <div className="title pink item1 break__word"><span>better </span><span>than</span></div>
                             <div className="item2">
-                                <img src="/three.png" />
+                                <img src="/better_than.png" alt=""/>
                             </div>
-                            <div className="title yellow item3 hide-sm item-ques">?</div>
+                            <div className="title pink item3 hide-sm item-ques">?</div>
                         </div>
                         <div className="description">
                             <h4 className="fontW-700">
@@ -85,12 +61,12 @@ const Index = () => {
                     </div>
 
                     <div className="grading_band desktop">
-                        <img src='/gradingBand.png'/>
+                        <img src='/gradingBand.png' alt=""/>
                     </div>
                     
                 </div>
                 <div className="grading_band mob">
-                        <img src='/gradingBand.png'/>
+                        <img src='/gradingBand.png' alt=""/>
                 </div>
             </section>
 
@@ -115,38 +91,38 @@ const Index = () => {
                     <div className="gamma_info_item gamma_info_item_data">
 
                         <div className="gamma__list">
-                            <p><b>Grade S:&nbsp;</b>1-3 occurences</p>
+                            <p><b>Grade S:&nbsp;</b>1-3 Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
                         <div className="gamma__list">
-                            <p><b>Grade A:&nbsp;</b>4-10 occurences</p>
+                            <p><b>Grade A:&nbsp;</b>4-10 Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
                         <div className="gamma__list">
-                            <p><b>Grade B:&nbsp;</b>11-50 occurences</p>
+                            <p><b>Grade B:&nbsp;</b>11-50 Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
                         <div className="gamma__list">
-                            <p><b>Grade C:&nbsp;</b>51-500 occurences</p>
+                            <p><b>Grade C:&nbsp;</b>51-500 Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
                         <div className="gamma__list">
-                            <p><b>Grade D:&nbsp;</b>501-1,000 occurences</p>
+                            <p><b>Grade D:&nbsp;</b>501-1,000 Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
                         <div className="gamma__list">
-                            <p><b>Grade E:&nbsp;</b>1001-5,000 occurences</p>
+                            <p><b>Grade E:&nbsp;</b>1001-5,000 Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
                         <div className="gamma__list">
-                            <p><b>Grade F:&nbsp;</b>5000+ occurences</p>
+                            <p><b>Grade F:&nbsp;</b>5000+ Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
 
                     </div>
                 </div>
             </section>
-            {/* <div className="text"><p>(All occurences are out of 10,000)</p></div> */}
+            {/* <div className="text"><p>(All Occurences are out of 10,000)</p></div> */}
            
         </>
     )
