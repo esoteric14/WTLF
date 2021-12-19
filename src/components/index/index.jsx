@@ -89,41 +89,34 @@ const Index = () => {
                         </div>
                     </div>
                     <div className="gamma_info_item gamma_info_item_data">
-
                         <div className="gamma__list">
-                            <p><b>Grade S:&nbsp;</b>1-3 Occurences</p>
+                            <p><b>Grade X:&nbsp;</b>1-3 Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
                         <div className="gamma__list">
-                            <p><b>Grade A:&nbsp;</b>4-10 Occurences</p>
+                            <p><b>Grade S:&nbsp;</b>4-10 Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
                         <div className="gamma__list">
-                            <p><b>Grade B:&nbsp;</b>11-50 Occurences</p>
+                            <p><b>Grade A:&nbsp;</b>11-100 Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
                         <div className="gamma__list">
-                            <p><b>Grade C:&nbsp;</b>51-500 Occurences</p>
+                            <p><b>Grade B:&nbsp;</b>101-250 Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
                         <div className="gamma__list">
-                            <p><b>Grade D:&nbsp;</b>501-1,000 Occurences</p>
+                            <p><b>Grade C:&nbsp;</b>251-1,000 Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
                         <div className="gamma__list">
-                            <p><b>Grade E:&nbsp;</b>1001-5,000 Occurences</p>
+                            <p><b>Grade D:&nbsp;</b>1000+ Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
-                        <div className="gamma__list">
-                            <p><b>Grade F:&nbsp;</b>5000+ Occurences</p>
-                            <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
-                        </div>
-
+                        <div className="gamma__list" style={{marginTop: '20px', paddingLeft: '10px'}}><p>(All Occurences are out of 10,000)</p></div>
                     </div>
                 </div>
             </section>
-            {/* <div className="text"><p>(All Occurences are out of 10,000)</p></div> */}
-           
         </>
     )
 };

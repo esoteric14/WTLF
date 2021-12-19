@@ -428,7 +428,7 @@ ul {
 }
 .gamma_info_item {
   border-radius: 46px;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* justify-self: start;
   align-self: center; */
 }

@@ -20,6 +20,10 @@ body {
   font-size: 12px;
   padding: 10px 20px;
 }
+
+.links{
+  padding-right: 10px;
+}
 @media (max-width: 1180px) {
   .which_tlf {
     justify-content: center;
