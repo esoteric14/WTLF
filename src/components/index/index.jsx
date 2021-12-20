@@ -28,6 +28,13 @@ const Index = () => {
                         <p>
                         Each has unqiue emotions and characteristics, some of which might make it rarer than others. Check out the rare feature on each WTLF, to get the rarer WTLF for yourself.
                         </p>
+                        <a href="https://opensea.io/collection/wtlf" target="_blank">
+                            <div className="openSea-btn">
+                            Buy On OpenSea      
+                            </div>
+                        </a>
+                        
+
                     </div>
                 </div>
             </section>

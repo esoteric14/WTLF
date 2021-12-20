@@ -19,7 +19,7 @@ nav {
 }
 .fixedNav {
   position: fixed;
-  width: 90vw;
+  width: 100vw;
   background: #fff;
   top: 0;
 }
@@ -59,26 +59,17 @@ nav li:hover,
   justify-content: space-around;
   flex-flow: column nowrap;
   z-index: 10;
-  margin-bottom: 3px;
+  /* margin-bottom: 3px; */
 }
 .hamburger {
   display: none;
 }
 .burger {
-  width: 2rem;
-  height: 0.25rem;
-  border-radius: 10px;
+  width: 1.5rem;
+  height: 0.3rem;
   background-color: #000;
 }
 
-@media (max-width: 1024px) {
-  .hamburger {
-    display: flex;
-  }
-  .non-burger {
-    display: none;
-  }
-}
 nav {
   display: flex;
   justify-content: space-between;
@@ -124,23 +115,9 @@ nav li:hover,
 }
 
 .hamburger {
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  justify-content: space-around;
-  flex-flow: column nowrap;
-  z-index: 10;
-  margin-bottom: 3px;
-}
-.hamburger {
   display: none;
 }
-.burger {
-  width: 2rem;
-  height: 0.25rem;
-  border-radius: 10px;
-  background-color: #000;
-}
+
 
 @media (max-width: 1024px) {
   .hamburger {
@@ -148,6 +125,23 @@ nav li:hover,
   }
   .non-burger {
     display: none;
+  }
+  .header{
+    padding: 0px;
+  }
+  nav{
+    padding: 5px 20px;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+    border: none;
+    }
+    .fixedNav{
+      width: 100vw;
+    }
+    .header__tag{
+      padding-left: 20px;
+    }
+    nav>h3>a {
+      font-size: 18px;
   }
 }
 .dropDown {
