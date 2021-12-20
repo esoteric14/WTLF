@@ -59,15 +59,14 @@ nav li:hover,
   justify-content: space-around;
   flex-flow: column nowrap;
   z-index: 10;
-  margin-bottom: 3px;
+  /* margin-bottom: 3px; */
 }
 .hamburger {
   display: none;
 }
 .burger {
-  width: 2rem;
-  height: 0.25rem;
-  border-radius: 10px;
+  width: 1.5rem;
+  height: 0.3rem;
   background-color: #000;
 }
 
@@ -123,7 +122,7 @@ nav li:hover,
   color: #000;
 }
 
-.hamburger {
+/* .hamburger {
   width: 2rem;
   height: 2rem;
   display: flex;
@@ -131,16 +130,11 @@ nav li:hover,
   flex-flow: column nowrap;
   z-index: 10;
   margin-bottom: 3px;
-}
+} */
 .hamburger {
   display: none;
 }
-.burger {
-  width: 2rem;
-  height: 0.25rem;
-  border-radius: 10px;
-  background-color: #000;
-}
+
 
 @media (max-width: 1024px) {
   .hamburger {
@@ -149,6 +143,18 @@ nav li:hover,
   .non-burger {
     display: none;
   }
+  .header{
+    padding: 0px;
+  }
+  nav{
+    padding: 5px 20px;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+    border: none;
+    }
+    .fixedNav{
+      width: 100vw;
+    }
+
 }
 .dropDown {
   position: fixed;
@@ -205,20 +211,4 @@ nav li:hover,
 .header__tag a{
   text-decoration: none;
   color: #000;
-}
-.openSea-btn{
-  font-family: Open Sans;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 10px;
-    line-height: 25px;
-    text-align: center;
-    letter-spacing: -0.015em;
-    color: #ffffff;
-    background: #60c6ff;
-    border-radius: 20px;
-    border: none;
-    padding: 8px 10px;
-    width: 7rem;
-    margin-top: 40px;
 }
