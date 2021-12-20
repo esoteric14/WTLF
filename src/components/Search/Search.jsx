@@ -26,9 +26,6 @@ const Search = ({ setPage, setIsLoading }) => {
 
   return (
     <form className="search_container" onSubmit={onSubmit}>
-      <label for="search_face" className={value != " " ? "hide" : ""}>
-        Search from 1-10000
-      </label>
       <input
         onChange={handleChange}
         value={value}
@@ -37,7 +34,7 @@ const Search = ({ setPage, setIsLoading }) => {
         name="avatarName"
         min="1"
         max="10000"
-        placeholder={""}
+        placeholder="Search from 1-10000"
         ref={inputRef}
       />
 

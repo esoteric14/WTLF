@@ -7,7 +7,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   column-gap: 2rem;
-  min-height: 70vh;
+  min-height: 90vh;
 }
 .which_tlf {
   display: inline-flex;
@@ -19,7 +19,7 @@ body {
   align-items: self-end;
 
   /* margin: 2% 30px; */
-  margin-top: 25vh;
+  /* margin-top: 25vh; */
 }
 .red_circle {
   display: none;
@@ -237,7 +237,7 @@ body {
 }
 
 @media (max-width: 600px) {
-  .item-info{
+  .item-info {
     height: auto !important;
   }
   .which_tlf {
@@ -292,7 +292,7 @@ body {
   }
 }
 @media (min-width: 1200px) {
-  .overrideWidth{
+  .overrideWidth {
     max-width: 90vw;
   }
 }

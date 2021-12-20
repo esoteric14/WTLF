@@ -32,7 +32,7 @@ const WTLF = ({ rarity }) => {
     };
 
     fetch(
-      `http://api.whythelongface.club/others?prop=${query.get("rarity")}`,
+      `//api.whythelongface.club/others?prop=${query.get("rarity")}`,
       requestOptions
     )
       .then((response) => response.json())
