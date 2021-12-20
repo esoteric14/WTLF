@@ -206,3 +206,19 @@ nav li:hover,
   text-decoration: none;
   color: #000;
 }
+.openSea-btn{
+  font-family: Open Sans;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #ffffff;
+    background: #60c6ff;
+    border-radius: 20px;
+    border: none;
+    padding: 8px 10px;
+    width: 7rem;
+    margin-top: 40px;
+}
