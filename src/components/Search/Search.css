@@ -2,11 +2,17 @@
   border: 1px solid #dadada;
   box-sizing: border-box;
   border-radius: 24px;
-  padding: 7px 10px;
+  padding: 4px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 387px;
+  position: relative;
+}
+.search_container label {
+  position: absolute;
+  padding-left: 10px;
+  color: #e1e1e1;
 }
 @media (max-width: 600px) {
   .search_container {
