@@ -36,6 +36,11 @@ nav ul {
   text-decoration: none;
   color: var(--black);
 }
+.link-menu:hover {
+  text-decoration: none;
+  color: var(--black);
+  color:#000
+}
 nav li {
   padding: 6px;
   margin-bottom: -20px;
