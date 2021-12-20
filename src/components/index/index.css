@@ -441,7 +441,7 @@ ul {
   max-height: 420px;
 }
 .gamma_info_item_data {
-  padding: 90px 70px;
+  padding: 80px 45px;
   background-color: #e5e5e5;
 }
 
@@ -482,7 +482,7 @@ ul {
     height: 360px;
   }
   .gamma__list p {
-    font-size: 12px;
+    font-size: 10px;
   }
   .gamma-md-hide {
     display: none;

@@ -26,7 +26,7 @@ const Index = () => {
                             The characters were randomly generated & then hand-picked and graded for even more freshness and pop.
                         </p>
                         <p>
-                            Each has unqiue characteristics, some of which might make it rarer than others. Check out the rare feature on each WTLF, to get the rarer WTLF for yourself.
+                        Each has unqiue emotions and characteristics, some of which might make it rarer than others. Check out the rare feature on each WTLF, to get the rarer WTLF for yourself.
                         </p>
                     </div>
                 </div>
