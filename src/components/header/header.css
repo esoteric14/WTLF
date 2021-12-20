@@ -154,7 +154,9 @@ nav li:hover,
     .fixedNav{
       width: 100vw;
     }
-
+    .header__tag{
+      padding-left: 20px;
+    }
 }
 .dropDown {
   position: fixed;
