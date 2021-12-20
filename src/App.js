@@ -1,4 +1,5 @@
 import "./App.css";
+import "antd/dist/antd.css";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import Whotlf from "./components/who/whotlf";
