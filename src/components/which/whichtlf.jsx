@@ -44,7 +44,7 @@ const Modal = ({ isOpen, setIsOpen, data, rarityData }) => {
       className={isOpen ? "show modal" : "hide"}
       onClick={handleClickOutside}
     >
-      <div className="container" ref={ref}>
+      <div className="container overrideWidth" ref={ref}>
         <div className="flex content">
           <div className="modal__img">
             <img src={data.defaultPath} className="img-fluid" />
@@ -74,7 +74,6 @@ const Modal = ({ isOpen, setIsOpen, data, rarityData }) => {
 
 const getLinks = (label, data, handleFeatureClick, getRarityData) => {
   const links = data.split(",");
-  console.log("links:", links);
   if (links.length > 0) {
     return (
       <p>
@@ -149,7 +148,7 @@ const Whichtlf = () => {
     if (isLoading) {
       return false;
     }
-    console.log("effect trigger faces");
+    setIsLoading(true);
     var requestOptions = {
       method: "GET",
       redirect: "follow",
@@ -158,6 +157,7 @@ const Whichtlf = () => {
     fetch(`//api.whythelongface.club/faces?face=${page}`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
+        setIsLoading(false);
         if (result.length > 0) {
           console.log("face fetched result:", result);
 
@@ -169,6 +169,7 @@ const Whichtlf = () => {
             setError((_) => "");
           }
         } else {
+          setIsLoading(false);
           setError((_) => "Unable to fetch");
         }
       })

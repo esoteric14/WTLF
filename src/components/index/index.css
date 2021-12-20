@@ -1,6 +1,6 @@
 @import "../../App.css";
 
-.alpha{
+.alpha {
   margin-top: 40px;
 }
 .alpha .title {
@@ -15,17 +15,17 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin-left: -100px;
+  margin-left: -12vw;
   margin-top: -50px;
 }
 .desc__content {
-  width: 350px;
+  width: 250px;
   margin-top: -20px;
 }
 
 .desc__content h4,
 .desc__content p {
-  font-family: Open Sans;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
@@ -91,10 +91,10 @@
 .red {
   color: #ff0000;
 }
-.green{
-  color: #A3C000;
+.green {
+  color: #a3c000;
 }
-.pink{
+.pink {
   color: #f08686;
 }
 .yellow {
@@ -171,7 +171,7 @@ a.active > li > span {
   margin: 3%;
   margin-top: 65px;
 }
-.beta{
+.beta {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -204,10 +204,11 @@ a.active > li > span {
   height: 100%;
   display: none;
 }
-.grading_band>*{
-  /* width: 314px;
-  height: 319px; */
-  margin: 10px;
+.grading_band > * {
+  /* width: 314px;	
+  height: 319px;	 */
+  /* margin: 10px;	 */
+  display: flex;
 }
 @media screen and (max-width: 980px) {
   .beta .hero:nth-child(2) {
@@ -399,18 +400,18 @@ ul {
 }
 
 .gamma__content h2 {
-  font-family: Open Sans;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 84px;
   line-height: 90px;
   letter-spacing: -0.015em;
-  color: #FDB72A;
+  color: #e4370b;
 }
 
 .gamma__content p,
 .gamma-show-md p {
-  font-family: Open Sans;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -428,7 +429,7 @@ ul {
 }
 .gamma_info_item {
   border-radius: 46px;
-  /* overflow: hidden; */
+  overflow: hidden;
   /* justify-self: start;
   align-self: center; */
 }
@@ -440,7 +441,7 @@ ul {
   max-height: 420px;
 }
 .gamma_info_item_data {
-  padding: 90px 40px;
+  padding: 90px 70px;
   background-color: #e5e5e5;
 }
 
@@ -450,7 +451,7 @@ ul {
   align-items: center;
 }
 .gamma__list p {
-  font-family: Open Sans;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -475,7 +476,7 @@ ul {
     gap: 10px;
   }
   .gamma_info_item_data {
-    padding: 55px 35px;
+    padding: 45px 20px;
   }
   .gamma_info_item img {
     height: 360px;
@@ -512,7 +513,7 @@ ul {
   }
   .gamma_info_item_data {
     margin: 0 auto;
-    width: 76% !important;
+    width: 85% !important;
   }
   .gamma-show-md {
     display: block;
@@ -537,15 +538,15 @@ ul {
     width: 260px;
     height: 270px;
   }
-  .grading_band>*{
+  .grading_band > * {
     width: 280px;
     height: 270px;
     margin-left: -25px;
   }
 }
 
-@media(max-width:800px){
-  .gamma{
+@media (max-width: 800px) {
+  .gamma {
     width: auto;
     padding-right: 0px;
     padding-left: 0px;
@@ -554,46 +555,64 @@ ul {
     padding: 5%;
   }
 }
-@media(min-width:1440px){
+@media (min-width: 1440px) {
   .beta {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
- .desktop{
-  display: flex;
+  }
+  .desktop {
+    display: flex;
     width: 70vw;
-}
-.mob{
-  display: none;
-}
-}
-@media(max-width:1439px){
-  .desktop{
+  }
+  .mob {
     display: none;
   }
-  .mob{
+}
+@media (max-width: 1439px) {
+  .desktop {
+    display: none;
+  }
+  .mob {
     display: block;
   }
 }
-.gamma__list a{
+.gamma__list a {
   text-decoration: underline;
   color: blue;
 }
-.occurences{
+.occurences {
   display: flex;
   flex-wrap: wrap;
 }
-.occurences>div{
-  width:50%;
+.occurences > div {
+  width: 50%;
 }
-.occurences>.text{
+.occurences > .text {
   font-style: italic;
 }
-.text p{
+.text p {
   padding: 0px 15%;
 }
-.recharts-wrapper{
+.recharts-wrapper {
   background-color: #ffffff;
+}
+
+.wtlf__message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wtlf__message h2 {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 300 !important;
+  font-size: 75px;
+  line-height: 75px;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: #c8cb4a;
+  margin: 120px 0 50px 0;
 }

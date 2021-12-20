@@ -192,3 +192,7 @@ nav li:hover,
     height: 100%;
   }
 }
+.header__tag a{
+  text-decoration: none;
+  color: #000;
+}
