@@ -35,6 +35,7 @@ nav ul {
 .link-menu {
   text-decoration: none;
   color: var(--black);
+  font-size: 18px;
 }
 .link-menu:hover {
   text-decoration: none;
