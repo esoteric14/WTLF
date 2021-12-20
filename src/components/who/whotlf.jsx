@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import forehead from "../../assets/head.png";
 import chin from "../../assets/chin.png";
 import painting from "../../assets/painting.png";
+import four from "../../assets/four.png"; //replace this with ringmeister image
 import "./whotlf.css";
 import Fade from "react-reveal/Fade";
 
@@ -18,6 +19,7 @@ const ShortText = (props) => {
 
 const Whotlf = () => {
   const [reveal, setReveal] = useState(false);
+  const [logik, setLogik] = useState(false);
   const [expand, setExpand] = useState(false);
   const [width, setWidth] = useState(0);
   useEffect(() => {
@@ -36,12 +38,19 @@ const Whotlf = () => {
     <div
       className="who-tlf"
       onClick={() => {
-        if (width <= 768) setReveal(false);
+        if (width <= 768) {
+          setReveal(false);
+          setLogik(false);
+        }
       }}
     >
       <ShortText superClass="desktop">
         <Fade right when={reveal}>
-          <img src={painting} alt="" className="fade-image side-img" />
+          <img
+            src={logik ? painting : four}
+            alt=""
+            className="fade-image side-img"
+          />
         </Fade>
       </ShortText>
       <div className="image-container">
@@ -57,14 +66,21 @@ const Whotlf = () => {
               onClick={(e) => {
                 if (width <= 768) {
                   setReveal(true);
+                  setLogik(true);
                   e.stopPropagation();
                 }
               }}
               onMouseEnter={() => {
-                if (width > 768) setReveal(true);
+                if (width > 768) {
+                  setReveal(true);
+                  setLogik(true);
+                }
               }}
               onMouseLeave={() => {
-                if (width > 768) setReveal(false);
+                if (width > 768) {
+                  setReveal(false);
+                  setLogik(false);
+                }
               }}
             >
               {" "}
@@ -88,7 +104,7 @@ const Whotlf = () => {
                 if (width > 768) setReveal(false);
               }}
             >
-              //partmeister
+              //ringmeister
             </span>{" "}
             this rather innocuous question, back
           </p>
@@ -96,8 +112,8 @@ const Whotlf = () => {
           <p> illustrations that proved that ‘a long face’ can be</p>
           <p> more than just one emotion. They could be cool, or</p>
           <p>cruel. Mischievous or morbid. Funny or furious.</p>
-          <p>10 years, a few algos, a few more friends </p>
-          <p>and hundreds of design re-re-re-tweaks later,</p>{" "}
+          <p>10 years, a few algos, a few more friends and</p>
+          <p>hundreds of design re-re-re-tweaks later,</p>{" "}
           <p>the Rogues Collective proudly released</p>
           <p>the WTLF project</p>
           <Fade right when={reveal}>
@@ -106,7 +122,11 @@ const Whotlf = () => {
                 className="flex-container"
                 style={{ display: reveal ? "flex" : "none" }}
               >
-                <img src={painting} alt="" className="fade-image-mobile" />
+                <img
+                  src={logik ? painting : four}
+                  alt=""
+                  className="fade-image-mobile"
+                />
                 {/* <div className="black-area-close"></div> */}
               </div>
             </div>
