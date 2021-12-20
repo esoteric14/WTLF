@@ -5,7 +5,19 @@ import { history } from "react-router";
 import Search from "../Search/Search";
 import "./whichtlf.css";
 
+import { Spin } from "antd";
+import { LoadingOutlined } from "@ant-design/icons";
+
 import { Tooltip } from "antd";
+
+const Loader = () => {
+  const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
+  return (
+    <div className="loading-wrapper">
+      <Spin indicator={antIcon} />
+    </div>
+  );
+};
 
 const Modal = ({ isOpen, setIsOpen, data, rarityData }) => {
   let navigation = useNavigate();
@@ -79,7 +91,7 @@ const getLinks = (label, data, handleFeatureClick, getRarityData) => {
       <p>
         {label}
         {links.map((e, index) => {
-          let value = e.trim();
+          let value = `${e.trim()}`;
           let fetchData = getRarityData(value);
           if (fetchData) {
             let { RarityGrade, Count } = fetchData;
@@ -116,7 +128,7 @@ const Whichtlf = () => {
   const [data, setData] = useState({});
   const [rarityData, setRarityData] = useState([]);
   const [error, setError] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const getRarity = (rarity) => {
     var requestOptions = {
       method: "GET",
@@ -130,6 +142,7 @@ const Whichtlf = () => {
           if (!rarityData.find((item) => item.Count !== result[0].Count)) {
             setRarityData((previous) => previous.concat(result[0]));
             setIsOpen(true);
+            setIsLoading((_) => false);
           }
           if (error.length > 0) {
             setError((_) => "");
@@ -145,9 +158,6 @@ const Whichtlf = () => {
     navigation(`/WTLF?rarity=${assetName}`);
   };
   useEffect(() => {
-    if (isLoading) {
-      return false;
-    }
     setIsLoading(true);
     var requestOptions = {
       method: "GET",
@@ -157,19 +167,26 @@ const Whichtlf = () => {
     fetch(`//api.whythelongface.club/faces?face=${page}`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
-        setIsLoading(false);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 300);
         if (result.length > 0) {
           console.log("face fetched result:", result);
 
           // search.set();
           setData((_) => result[0]);
           setRarityData((_) => []);
+          setTimeout(() => {
+            setIsLoading(false);
+          }, 300);
 
           if (error.length > 0) {
             setError((_) => "");
           }
         } else {
-          setIsLoading(false);
+          setTimeout(() => {
+            setIsLoading(false);
+          }, 300);
           setError((_) => "Unable to fetch");
         }
       })
@@ -189,6 +206,10 @@ const Whichtlf = () => {
 
   const getRarityData = (label) =>
     rarityData.find((item) => item.assetName === label);
+
+  if (isLoading) {
+    return <Loader />;
+  }
   return (
     <section className="which_tlf">
       <div className="wrapper">
@@ -210,7 +231,6 @@ const Whichtlf = () => {
                 <div className="btns item__grow_1_mobile">
                   <button
                     type="button"
-                    disabled="disabled"
                     className="btn-action"
                     onClick={() => {
                       if (page > 1) {
@@ -238,7 +258,7 @@ const Whichtlf = () => {
             <p>Grade: {data.Grade}</p>
             {data.mostRare &&
               getLinks(
-                "Rarest Features:",
+                "Rarest Features: ",
                 data.mostRare,
                 handleFeatureClick,
                 getRarityData
