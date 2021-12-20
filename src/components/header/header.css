@@ -19,7 +19,7 @@ nav {
 }
 .fixedNav {
   position: fixed;
-  width: 90vw;
+  width: 100vw;
   background: #fff;
   top: 0;
 }
@@ -35,7 +35,6 @@ nav ul {
 .link-menu {
   text-decoration: none;
   color: var(--black);
-  font-size: 18px;
 }
 .link-menu:hover {
   text-decoration: none;
@@ -71,14 +70,6 @@ nav li:hover,
   background-color: #000;
 }
 
-@media (max-width: 1024px) {
-  .hamburger {
-    display: flex;
-  }
-  .non-burger {
-    display: none;
-  }
-}
 nav {
   display: flex;
   justify-content: space-between;
@@ -123,15 +114,6 @@ nav li:hover,
   color: #000;
 }
 
-/* .hamburger {
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  justify-content: space-around;
-  flex-flow: column nowrap;
-  z-index: 10;
-  margin-bottom: 3px;
-} */
 .hamburger {
   display: none;
 }
@@ -158,6 +140,9 @@ nav li:hover,
     .header__tag{
       padding-left: 20px;
     }
+    nav>h3>a {
+      font-size: 18px;
+  }
 }
 .dropDown {
   position: fixed;
