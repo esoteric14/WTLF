@@ -9,7 +9,7 @@ const getLinks = (data, handleRarestClick) => {
     <>
       {links.map((e, index) => (
         <li className="list" key={e + index}>
-          <a onClick={(_) => handleRarestClick(e)}>{`#${e} ;`}</a>
+          <a onClick={(_) => handleRarestClick(e)}>{` ${e} ;`}</a>
         </li>
       ))}
     </>
