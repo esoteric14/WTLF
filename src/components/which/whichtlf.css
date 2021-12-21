@@ -43,13 +43,17 @@ body {
   color: #0047ff;
   text-decoration: underline;
 }
+
+.links span{
+  cursor: pointer;
+}
 @media (max-width: 1180px) {
   .which_tlf {
     justify-content: center;
   }
-  .item-info {
-    /* height: 65vh !important; */
-  }
+  /* .item-info {
+    height: 65vh !important;
+  } */
 }
 
 .which_tlf .item {

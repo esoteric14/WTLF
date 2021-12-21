@@ -129,7 +129,7 @@ const Index = () => {
                     </div>
                 </div>
             </section>
-            <section className="wtlf__message">
+            <section className="container wtlf__message">
                 <h2>collect your favourite WTLFs!</h2>
             </section>
         </>

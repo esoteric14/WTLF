@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import forehead from "../../assets/head.png";
 import chin from "../../assets/chin.png";
 import painting from "../../assets/painting.png";
-import four from "../../assets/four.png"; //replace this with ringmeister image
+import four from "../../assets/meister.png"; //replace this with ringmeister image
 import "./whotlf.css";
 import Fade from "react-reveal/Fade";
 

@@ -11,6 +11,7 @@
 .hidden {
   visibility: hidden;
 }
+
 .alpha .description {
   display: flex;
   align-items: flex-start;
@@ -106,7 +107,7 @@
   font-style: normal;
   font-weight: 300;
   font-size: 8vw;
-  line-height: 120px;
+  line-height: 90px;
   letter-spacing: -0.015em;
 }
 
@@ -180,7 +181,7 @@ a.active > li > span {
   width: 70vw;
 }
 .beta .hero {
-  align-items: baseline;
+  align-items: end;
 }
 
 .beta .hero:nth-child(2) {
@@ -610,25 +611,26 @@ ul {
   font-style: normal;
   font-weight: 300 !important;
   font-size: 75px;
-  line-height: 75px;
+  line-height: 95px;
   text-align: center;
   letter-spacing: -0.015em;
   color: #c8cb4a;
   margin: 120px 0 50px 0;
 }
-.openSea-btn{
+.openSea-btn {
   font-family: Open Sans;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 10px;
-    line-height: 25px;
-    text-align: center;
-    letter-spacing: -0.015em;
-    color: #ffffff;
-    background: #60c6ff;
-    border-radius: 20px;
-    border: none;
-    padding: 8px 10px;
-    width: 7rem;
-    margin-top: 40px;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+  background: #60c6ff;
+  border-radius: 20px;
+  border: none;
+  padding: 8px 10px;
+  width: 7rem;
+  margin-top: 40px;
 }
+

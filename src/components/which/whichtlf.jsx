@@ -90,7 +90,7 @@ const getLinks = (label, data, handleFeatureClick, getRarityData) => {
     return (
       <p>
         {label}
-        {links.map((e, index) => {
+        {links.map((e, index, arr) => {
           let value = `${e.trim()}`;
           let fetchData = getRarityData(value);
           if (fetchData) {
@@ -104,7 +104,7 @@ const getLinks = (label, data, handleFeatureClick, getRarityData) => {
                 onClick={() => handleFeatureClick(value)}
               >
                 <span>
-                  <Tooltip title={title}>{value}</Tooltip>
+                  <Tooltip title={title}>{value}{arr.length === (index+1) ?'':';'}</Tooltip>
                 </span>
               </div>
             );
