@@ -10,13 +10,16 @@ import { LoadingOutlined } from "@ant-design/icons";
 
 import { Tooltip } from "antd";
 
-const Loader = () => {
+const Loader = ({ isLoading }) => {
   const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
-  return (
-    <div className="loading-wrapper">
-      <Spin indicator={antIcon} />
-    </div>
-  );
+  if (isLoading) {
+    return (
+      <div className="loading-wrapper">
+        <Spin indicator={antIcon} />
+      </div>
+    );
+  }
+  return null;
 };
 
 const Modal = ({ isOpen, setIsOpen, data, rarityData }) => {
@@ -89,7 +92,7 @@ const getLinks = (label, data, handleFeatureClick, getRarityData) => {
   if (links.length > 0) {
     return (
       <p>
-        {label}
+        <b>{label}</b>
         {links.map((e, index, arr) => {
           let value = `${e.trim()}`;
           let fetchData = getRarityData(value);
@@ -145,7 +148,9 @@ const Whichtlf = () => {
           if (!rarityData.find((item) => item.Count !== result[0].Count)) {
             setRarityData((previous) => previous.concat(result[0]));
             setIsOpen(true);
-            setIsLoading((_) => false);
+            setTimeout(() => {
+              setIsLoading((_) => false);
+            }, 600);
           }
           if (error.length > 0) {
             setError((_) => "");
@@ -172,7 +177,7 @@ const Whichtlf = () => {
       .then((result) => {
         setTimeout(() => {
           setIsLoading(false);
-        }, 300);
+        }, 600);
         if (result.length > 0) {
           console.log("face fetched result:", result);
 
@@ -181,7 +186,7 @@ const Whichtlf = () => {
           setRarityData((_) => []);
           setTimeout(() => {
             setIsLoading(false);
-          }, 300);
+          }, 600);
 
           if (error.length > 0) {
             setError((_) => "");
@@ -210,13 +215,11 @@ const Whichtlf = () => {
   const getRarityData = (label) =>
     rarityData.find((item) => item.assetName === label);
 
-  if (isLoading) {
-    return <Loader />;
-  }
   return (
-    <section className="which_tlf">
-      <div className="wrapper">
-        <div className="item item-frame">
+    <>
+      <Loader isLoading={isLoading} />
+      <section className={`which_tlf`}>
+        <div className="wrapper">
           <div className="action">
             <div className="btns item__grow_1">
               <button
@@ -243,101 +246,100 @@ const Whichtlf = () => {
               {error.length > 0 ? <span className="error">{error}</span> : null}
             </div>
           </div>
-          <img className="frame" src={data.defaultPath} />
-        </div>
-        <div className="item item-info">
-          <div className="info">
-            <h5 className="hide">
-              <span className="red_circle"></span>sold
-            </h5>
-            <div className="info-box flex">
-              <h2 style={{ marginRight: "20px" }}>{data.AvatarName}</h2>
-              <div className="opensea_link">
-                <b className="hide">|</b>{" "}
-                <Link to="//opensea.io/collection/wtlf" className="hide">
-                  OpenSea
-                </Link>
-                <div className="btns item__grow_1_mobile">
-                  <button
-                    type="button"
-                    className="btn-action"
-                    onClick={() => {
-                      if (page > 1) {
-                        setPage(page - 1);
-                      }
-                    }}
-                  >
-                    <img src="/button-left.svg" alt="left" />
-                  </button>
-                  <button
-                    type="button"
-                    className="btn-action"
-                    onClick={() => {
-                      if (page < 10000) {
-                        setPage(page + 1);
-                      }
-                    }}
-                  >
-                    <img src="/button-right.svg" alt="right" />
-                  </button>
+          <div className="item item-frame">
+            <img className="frame" src={data.defaultPath} />
+          </div>
+          <div className="item item-info">
+            <div className="info">
+              <div className="btns item__grow_1_mobile">
+                <button
+                  type="button"
+                  className="btn-action"
+                  onClick={() => {
+                    if (page > 1) {
+                      setPage(page - 1);
+                    }
+                  }}
+                >
+                  <img src="/button-left.svg" alt="left" />
+                </button>
+                <button
+                  type="button"
+                  className="btn-action"
+                  onClick={() => {
+                    if (page < 10000) {
+                      setPage(page + 1);
+                    }
+                  }}
+                >
+                  <img src="/button-right.svg" alt="right" />
+                </button>
+              </div>
+              <h5 className="hide">
+                <span className="red_circle"></span>sold
+              </h5>
+              <div className="info-box flex">
+                <h2 className="title">{data.AvatarName}</h2>
+                <div className="opensea_link">
+                  <b className="hide">|</b>{" "}
+                  <Link to="//opensea.io/collection/wtlf" className="hide">
+                    OpenSea
+                  </Link>
                 </div>
               </div>
-            </div>
-            <p style={{ display: "none" }}>WTLF Grade: {}</p>
-            <p>Grade: {data.Grade}</p>
-            {data.mostRare &&
-              getLinks(
-                "Rarest Features: ",
-                data.mostRare,
-                handleFeatureClick,
-                getRarityData
-              )}
+              <p style={{ display: "none" }}>WTLF Grade: {}</p>
+              <p>
+                <b>WTLF Grade: {data.Grade}</b>
+              </p>
+              {data.mostRare &&
+                getLinks(
+                  "Rarest Features: ",
+                  data.mostRare,
+                  handleFeatureClick,
+                  getRarityData
+                )}
 
-            {data.mostCommon &&
-              getLinks(
-                "Most Common Features: ",
-                data.mostCommon,
-                handleFeatureClick,
-                getRarityData
-              )}
-          </div>
-          <div className="action">
-            <div className="btns item__grow_1">
-              <button
-                onClick={() => {
-                  if (page > 1) {
-                    setPage(page - 1);
-                  }
-                }}
-              >
-                <img src="/button-left.svg" alt="left" />
-              </button>
-              <button
-                onClick={() => {
-                  if (page < 10000) {
-                    setPage(page + 1);
-                  }
-                }}
-              >
-                <img src="/button-right.svg" alt="right" />
-              </button>
+              {data.mostCommon &&
+                getLinks(
+                  "Most Common Features: ",
+                  data.mostCommon,
+                  handleFeatureClick,
+                  getRarityData
+                )}
             </div>
-            <div className="search item__grow_3">
-              <Search setPage={setPage} setIsLoading={setIsLoading} />
-              {error.length > 0 ? <span className="error">{error}</span> : null}
+            <div className="action">
+              <div className="btns item__grow_1">
+                <button
+                  onClick={() => {
+                    if (page > 1) {
+                      setPage(page - 1);
+                    }
+                  }}
+                >
+                  <img src="/button-left.svg" alt="left" />
+                </button>
+                <button
+                  onClick={() => {
+                    if (page < 10000) {
+                      setPage(page + 1);
+                    }
+                  }}
+                >
+                  <img src="/button-right.svg" alt="right" />
+                </button>
+              </div>
+              <div className="search item__grow_3">
+                <Search setPage={setPage} setIsLoading={setIsLoading} />
+                {error.length > 0 ? (
+                  <span className="error">{error}</span>
+                ) : null}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
 export default Whichtlf;
-
-// <Modal
-//   isOpen={isOpen}
-//   setIsOpen={setIsOpen}
-//   rarityData={rarityData}
-//   data={data}
-// ></Modal>

@@ -22,11 +22,18 @@ body {
   /* margin-top: 25vh; */
 }
 .loading-wrapper {
-  height: 100%;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
 }
 .red_circle {
   display: none;
@@ -64,8 +71,14 @@ body {
   justify-content: end;
   align-items: center;
 }
+/* .item-frame {
+  height: 540px;
+  width: 540px;
+  height: 100%;
+  width: 100%;
+} */
 
-.item-frame > img {
+.item-frame {
   max-height: 540px;
   max-width: 540px;
   height: 100%;
@@ -74,6 +87,15 @@ body {
   background-repeat: no-repeat;
   padding: 9rem;
   background-size: contain;
+}
+.item-frame > img {
+  max-height: 250px;
+  max-width: 250px;
+  min-width: 100px;
+  min-height: 100px;
+  height: 100%;
+  width: 100%;
+  padding: 0;
 }
 .item-info {
   margin-top: 30px;
@@ -93,6 +115,12 @@ body {
   width: 545px;
   height: 280px;
   margin-top: 6rem;
+  line-height: 33px;
+}
+.info-box .title {
+  margin-right: 20px;
+  font-weight: 300;
+  font-size: 33px;
 }
 
 .btns button {
@@ -112,7 +140,7 @@ body {
   width: 100%;
   margin-bottom: 12px;
 }
-.item-frame .action {
+.wrapper > .action {
   display: none;
 }
 .item__grow_1 {
@@ -270,7 +298,7 @@ body {
     background-color: transparent;
     justify-content: flex-start;
   }
-  .item img {
+  .btn-action img {
     object-fit: contain;
     width: 80%;
     margin-left: 5px;
@@ -285,7 +313,7 @@ body {
   img.frame {
     height: 160px;
     width: 160px;
-    padding: 5rem;
+    /* padding: 5rem; */
   }
   .opensea_link {
     display: flex;
@@ -300,7 +328,7 @@ body {
   .item-info .action {
     display: none;
   }
-  .item-frame .action {
+  .wrapper > .action {
     display: flex;
   }
   .action {
@@ -326,7 +354,8 @@ body {
   .item-frame > img {
     width: 100%;
     height: auto;
-    padding: 8rem;
+
+    /* padding: 8rem; */
     /* padding: 30%; */
   }
   .modal .content {
@@ -339,9 +368,12 @@ body {
   .which_tlf {
     width: 100%;
   }
+  .item-frame {
+    padding: 30%;
+  }
   img.frame {
     margin: 0;
-    padding: 6rem;
+    /* padding: 6rem; */
   }
   .search_container {
     width: 90%;
