@@ -44,7 +44,7 @@ body {
   text-decoration: underline;
 }
 
-.links span{
+.links span {
   cursor: pointer;
 }
 @media (max-width: 1180px) {
@@ -60,19 +60,23 @@ body {
   display: flex;
   flex-direction: column;
   width: auto;
-  height: 450px;
+  height: auto;
   justify-content: end;
   align-items: center;
 }
 
 .item-frame > img {
-  min-height: 320px;
-  min-width: 320px;
-  margin-left: 8px;
+  max-height: 540px;
+  max-width: 540px;
+  height: 100%;
+  width: 100%;
   background-image: url("../../assets/frame.png");
   background-repeat: no-repeat;
-  padding: 8rem;
+  padding: 9rem;
   background-size: contain;
+}
+.item-info {
+  margin-top: 30px;
 }
 
 .info {
@@ -107,6 +111,9 @@ body {
   max-width: 555px;
   width: 100%;
   margin-bottom: 12px;
+}
+.item-frame .action {
+  display: none;
 }
 .item__grow_1 {
   flex-grow: 1;
@@ -290,12 +297,14 @@ body {
   .item__grow_1_mobile {
     display: flex;
   }
+  .item-info .action {
+    display: none;
+  }
+  .item-frame .action {
+    display: flex;
+  }
   .action {
     max-width: 100%;
-  }
-  .info-box {
-    justify-content: space-between;
-    width: 100%;
   }
   .btn-action {
     height: 35px;
@@ -317,7 +326,8 @@ body {
   .item-frame > img {
     width: 100%;
     height: auto;
-    padding: 30%;
+    padding: 8rem;
+    /* padding: 30%; */
   }
   .modal .content {
     flex-direction: column;

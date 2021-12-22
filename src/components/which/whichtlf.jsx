@@ -104,7 +104,10 @@ const getLinks = (label, data, handleFeatureClick, getRarityData) => {
                 onClick={() => handleFeatureClick(value)}
               >
                 <span>
-                  <Tooltip title={title}>{value}{arr.length === (index+1) ?'':';'}</Tooltip>
+                  <Tooltip title={title}>
+                    {value}
+                    {arr.length === index + 1 ? "" : ";"}
+                  </Tooltip>
                 </span>
               </div>
             );
@@ -214,6 +217,32 @@ const Whichtlf = () => {
     <section className="which_tlf">
       <div className="wrapper">
         <div className="item item-frame">
+          <div className="action">
+            <div className="btns item__grow_1">
+              <button
+                onClick={() => {
+                  if (page > 1) {
+                    setPage(page - 1);
+                  }
+                }}
+              >
+                <img src="/button-left.svg" alt="left" />
+              </button>
+              <button
+                onClick={() => {
+                  if (page < 10000) {
+                    setPage(page + 1);
+                  }
+                }}
+              >
+                <img src="/button-right.svg" alt="right" />
+              </button>
+            </div>
+            <div className="search item__grow_3">
+              <Search setPage={setPage} setIsLoading={setIsLoading} />
+              {error.length > 0 ? <span className="error">{error}</span> : null}
+            </div>
+          </div>
           <img className="frame" src={data.defaultPath} />
         </div>
         <div className="item item-info">
@@ -244,7 +273,7 @@ const Whichtlf = () => {
                     type="button"
                     className="btn-action"
                     onClick={() => {
-                      if (page < 1000) {
+                      if (page < 10000) {
                         setPage(page + 1);
                       }
                     }}
