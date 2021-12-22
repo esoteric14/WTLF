@@ -86,14 +86,14 @@ const Index = () => {
                 <div className="gamma__content">
                     <h2>elemental rarity levels</h2>
                     <div className="gamma-hide-md">
-                        <p>Every WTLF is made up of many different elements. And each element occurs in different numbers... some rarer than others. Be it a set of eyelashes, or a vintage t-shirt or one of the many fancy backgrounds, everything has a grade.</p>
-                        <p>The rarest of the rare are the “S-Class” and and the most common is “G-Class”. Each element gets a grade and when they are added together, you get the <u>over all WTLF grade.</u> So a WTLF with more  rare elements is more likely to be a higher grade WTLF.</p>
+                        <p>Every WTLF is made up of many different elements selected from a universe of over 930 unique elements. And each element occurs in the WTLF universe in different numbers... making some rarer than others. Be it a set of eyelashes, a vintage t-shirt or one of the many fancy backgrounds, everything has a grade.</p>
+                        <p>The rarest of the rare are the “Level X” and and the most common is “Level D”. Each element gets a grade and when they are added together, you get the <u>over all WTLF grade.</u> So a WTLF with more  rare elements is more likely to be a higher grade WTLF.</p>
                     </div>
                 </div>
                 <div className="gamma_info">
                     <div className="gamma_info_item">
                         <div className="gamma-img-container">
-                            <img src="/Head-Explode-v2.gif" alt="head-explode" />
+                            <img src="/Head_Explode_Elements.gif" alt="head-explode" />
                         </div>
                         <div className="gamma-show-md">
                             <p>Every WTLF is made up of many different elements. And each element occurs in different numbers... some rarer than others. Be it a set of eyelashes, or a vintage t-shirt or one of the many fancy backgrounds, everything has a grade.</p>
@@ -102,30 +102,30 @@ const Index = () => {
                     </div>
                     <div className="gamma_info_item gamma_info_item_data">
                         <div className="gamma__list">
-                            <p><b>Grade X:&nbsp;</b>1-3 Occurences</p>
+                            <p><b>Level X:&nbsp;</b>1-3 Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
                         <div className="gamma__list">
-                            <p><b>Grade S:&nbsp;</b>4-10 Occurences</p>
+                            <p><b>Level S:&nbsp;</b>4-10 Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
                         <div className="gamma__list">
-                            <p><b>Grade A:&nbsp;</b>11-100 Occurences</p>
+                            <p><b>Level A:&nbsp;</b>11-100 Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
                         <div className="gamma__list">
-                            <p><b>Grade B:&nbsp;</b>101-250 Occurences</p>
+                            <p><b>Level B:&nbsp;</b>101-250 Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
                         <div className="gamma__list">
-                            <p><b>Grade C:&nbsp;</b>251-1,000 Occurences</p>
+                            <p><b>Level C:&nbsp;</b>251-1,000 Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
                         <div className="gamma__list">
-                            <p><b>Grade D:&nbsp;</b>1000+ Occurences</p>
+                            <p><b>Level D:&nbsp;</b>1000+ Occurences</p>
                             <p>| <a>Example 1</a><a className="gamma-md-hide">| Example 2</a></p>
                         </div>
-                        <div className="gamma__list" style={{ marginTop: '20px', paddingLeft: '10px' }}><p>(All Occurences are out of 10,000)</p></div>
+                        <div className="gamma__list" style={{ marginTop: '20px' }}><p>(All Occurences are out of 10,000)</p></div>
                     </div>
                 </div>
             </section>
