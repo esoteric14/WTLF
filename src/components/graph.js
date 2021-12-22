@@ -52,10 +52,10 @@ const Graph = () => {
             height={320}
             data={data}
             margin={{
-            top: 20,
+            top: 25,
             right:-20,
             left: 10,
-            bottom: 20
+            bottom: 25
              }}
             //  barSize={50}
             >
@@ -71,10 +71,10 @@ const Graph = () => {
             height={320}
             data={dataLabels}
             margin={{
-            top: 20,
+            top: 25,
             right: 0,
-            left: 10,
-            bottom: 20
+            left: 0,
+            bottom: 25
              }}
             //  barSize={30}
             >
