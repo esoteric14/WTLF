@@ -86,7 +86,6 @@ const Modal = ({ isOpen, setIsOpen, data, rarityData }) => {
     </div>
   );
 };
-
 const getLinks = (label, data, handleFeatureClick, getRarityData) => {
   const links = data.split(",");
   if (links.length > 0) {
@@ -120,7 +119,6 @@ const getLinks = (label, data, handleFeatureClick, getRarityData) => {
     );
   }
 };
-
 const Whichtlf = () => {
   console.log("render");
   let navigation = useNavigate();
@@ -153,7 +151,7 @@ const Whichtlf = () => {
             }, 600);
           }
           if (error.length > 0) {
-            setError((_) => "");
+            setError((_) => error);
           }
         } else {
           setError((_) => "Unable to find data");
@@ -179,9 +177,6 @@ const Whichtlf = () => {
           setIsLoading(false);
         }, 600);
         if (result.length > 0) {
-          console.log("face fetched result:", result);
-
-          // search.set();
           setData((_) => result[0]);
           setRarityData((_) => []);
           setTimeout(() => {
@@ -189,13 +184,15 @@ const Whichtlf = () => {
           }, 600);
 
           if (error.length > 0) {
-            setError((_) => "");
+            setError((_) => error);
           }
         } else {
+          let errorMessage =
+            page > 10000 ? "We haven’t designed that yet." : "Unable to fetch";
           setTimeout(() => {
             setIsLoading(false);
           }, 300);
-          setError((_) => "Unable to fetch");
+          setError((_) => errorMessage);
         }
       })
       .catch((error) => console.log("error", error));
@@ -211,7 +208,6 @@ const Whichtlf = () => {
       });
     }
   }, [rarityData]);
-
   const getRarityData = (label) =>
     rarityData.find((item) => item.assetName === label);
 

@@ -149,6 +149,9 @@ body {
 .item__grow_1_mobile {
   display: none;
 }
+.item__grow_1_mobile .btn-action {
+  margin-right: 1.4rem;
+}
 .item__grow_3 {
   flex-grow: 3;
 }
@@ -300,8 +303,9 @@ body {
   }
   .btn-action img {
     object-fit: contain;
-    width: 80%;
-    margin-left: 5px;
+    height: 3rem;
+    margin: 0;
+    /* margin-left: 5px; */
   }
   .info {
     width: 100%;
