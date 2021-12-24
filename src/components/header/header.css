@@ -39,7 +39,7 @@ nav ul {
 .link-menu:hover {
   text-decoration: none;
   color: var(--black);
-  color:#000
+  color: #000;
 }
 nav li {
   padding: 6px;
@@ -99,7 +99,7 @@ nav ul {
   color: var(--black);
   font-weight: 400;
 }
-nav>h3>a{
+nav > h3 > a {
   font-weight: 700 !important;
 }
 nav li {
@@ -118,7 +118,6 @@ nav li:hover,
   display: none;
 }
 
-
 @media (max-width: 1024px) {
   .hamburger {
     display: flex;
@@ -126,22 +125,26 @@ nav li:hover,
   .non-burger {
     display: none;
   }
-  .header{
+  .header {
     padding: 0px;
   }
-  nav{
+  nav {
     padding: 5px 20px;
     box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
     border: none;
-    }
-    .fixedNav{
-      width: 100vw;
-    }
-    .header__tag{
-      padding-left: 20px;
-    }
-    nav>h3>a {
-      font-size: 18px;
+  }
+  .fixedNav {
+    width: 100vw;
+  }
+  .header__tag {
+    padding-left: 20px;
+  }
+  nav > h3 > a {
+    font-size: 18px;
+  }
+  a.link-menu {
+    display: inline-block;
+    padding-bottom: 5px;
   }
 }
 .dropDown {
@@ -196,7 +199,7 @@ nav li:hover,
     height: 100%;
   }
 }
-.header__tag a{
+.header__tag a {
   text-decoration: none;
   color: #000;
 }

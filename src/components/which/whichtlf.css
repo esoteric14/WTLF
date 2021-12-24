@@ -295,7 +295,6 @@ body {
     width: auto;
   }
   .which_tlf .item {
-    /* width: 100%; */
     height: fit-content;
     background-size: contain;
     background-color: transparent;
@@ -313,6 +312,7 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     height: auto;
+    padding-top: 10px;
   }
   img.frame {
     height: 160px;
