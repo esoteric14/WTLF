@@ -13,14 +13,10 @@ const Index = () => {
 
     const clickHandler =(name,src)=>{
         setIsOpen(true);
-        // let Name=text;
-        // let Src=text.split(' ').join('_')
         setData(data=>({...data,
             imgName:name,
             imgSrc:src
         }));
-        console.log(isOpen);
-        console.log(data);
     }
     const Modal = ({ isOpen, setIsOpen, data }) => {
         let navigation = useNavigate();

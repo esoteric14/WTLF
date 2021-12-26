@@ -214,7 +214,7 @@ body {
 }
 .modal .container {
   background: rgba(0, 0, 0, 0.93);
-  border-radius: 48px;
+  border-radius: 20px;
   position: relative;
   height: 90vh;
   padding: 3em;
@@ -349,6 +349,10 @@ body {
     padding: 0;
   }
 }
+.overrideWidth{
+  flex-direction: column;
+  width: 90%;
+}
 @media (min-width: 1200px) {
   .overrideWidth {
     max-width: 90vw;
@@ -389,3 +393,4 @@ body {
     /* margin: 0 15px; */
   }
 }
+

@@ -198,9 +198,6 @@ nav li:hover,
     border-radius: 0;
     height: 100%;
   }
-  .overrideWidth{
-    flex-direction: column;
-  }
 }
 .header__tag a {
   text-decoration: none;
