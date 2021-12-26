@@ -15,9 +15,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" exac element={<Index />}></Route>
-          <Route path="/WhatTLF" element={<Index />} />
-          <Route path="/WhoTLF" element={<Whotlf />} />
-          <Route path="/WhichTLF" element={<Whichtlf />} />
+          <Route path="WhatTLF" element={<Index />} />
+          <Route path="WhoTLF" element={<Whotlf />} />
+          <Route path="WhichTLF" element={<Whichtlf />} />
           <Route path="/WTLF" element={<WTLF />} />
         </Routes>
         <Footer />
