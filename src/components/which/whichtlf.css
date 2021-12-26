@@ -7,7 +7,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   column-gap: 2rem;
-  min-height: 90vh;
+  height: calc(100vh - 123px);
 }
 .which_tlf {
   display: inline-flex;
