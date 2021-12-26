@@ -5,9 +5,9 @@ const Graph = () => {
     const data = [
         {
           name: "grades",
-          gradeA: 3150,
-          gradeB: 3150,
           gradeC: 3150,
+          gradeB: 3150,
+          gradeA: 3150,
           gradeS: 500,
           gradeX: 50, 
         }
@@ -16,9 +16,9 @@ const Graph = () => {
       const dataLabels =[
           {
             name: "gradeValues",
-            gradeA: 3150,
-            gradeB: 3150,
             gradeC: 3150,
+            gradeB: 3150,
+            gradeA: 3150,
             gradeS: 500,
             gradeX: 50, 
         }
@@ -60,9 +60,10 @@ const Graph = () => {
             //  barSize={50}
             >
             {/* <Tooltip/> */}
-            <Bar dataKey="gradeA" stackId="a" fill="#57e145"></Bar>
-            <Bar dataKey="gradeB" stackId="a" fill="#45e1db"></Bar>
+            {/* <Bar dataKey="gradeA" stackId="a" fill="#57e145"></Bar> */}
             <Bar dataKey="gradeC" stackId="a" fill="#4583e1"></Bar>
+            <Bar dataKey="gradeB" stackId="a" fill="#45e1db"></Bar>
+            <Bar dataKey="gradeA" stackId="a" fill="#57e145"></Bar>
             <Bar dataKey="gradeS" stackId="a" fill="#e1df45"></Bar>
             <Bar dataKey="gradeX" stackId="a" fill="#e17a47"></Bar>
          </BarChart>
@@ -78,10 +79,10 @@ const Graph = () => {
              }}
             //  barSize={30}
             >
-            <Bar dataKey="gradeA" stackId="a" fill="#ffffff">
+               <Bar dataKey="gradeC" stackId="a" fill="#ffffff">
             <LabelList
-                dataKey="gradeA"
-                content={renderCustomizedLabelA}
+                dataKey="gradeC"
+                content={renderCustomizedLabelC}
               />
               </Bar>
             <Bar dataKey="gradeB" stackId="a" fill="#ffffff">
@@ -90,10 +91,10 @@ const Graph = () => {
                 content={renderCustomizedLabelB}
               />
               </Bar>
-            <Bar dataKey="gradeC" stackId="a" fill="#ffffff">
+              <Bar dataKey="gradeA" stackId="a" fill="#ffffff">
             <LabelList
-                dataKey="gradeC"
-                content={renderCustomizedLabelC}
+                dataKey="gradeA"
+                content={renderCustomizedLabelA}
               />
               </Bar>
             <Bar dataKey="gradeS" stackId="a" fill="#ffffff">

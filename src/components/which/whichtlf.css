@@ -217,6 +217,7 @@ body {
   border-radius: 48px;
   position: relative;
   height: 90vh;
+  padding: 3em;
 }
 
 .modal .content {
@@ -246,11 +247,15 @@ body {
   border-radius: 54px;
 }
 .modal__info {
-  height: 250px;
+  height: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
+  text-align: center;
+}
+.modal__info h2{
+  color: #ffffff;
 }
 .modal__btn {
   background-color: #60c6ff;
@@ -267,9 +272,9 @@ body {
   padding: 8px 35px;
 }
 .cross {
-  position: absolute;
+  /* position: absolute;
   top: 30px;
-  right: 30px;
+  right: 30px; */
   color: #ffffff;
   border: 1px solid #ffffff;
   border-radius: 50%;
