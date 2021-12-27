@@ -3,6 +3,7 @@
 .header {
   padding: 0px 5%;
   position: sticky;
+  width: 100%;
   top: 0;
   height: auto;
   z-index: 1;

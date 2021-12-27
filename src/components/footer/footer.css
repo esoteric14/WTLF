@@ -1,21 +1,21 @@
 .footer-wrapper {
-  width: 100%;
+  /* width: 200px; */
 }
 .svg-container {
   margin: 0 auto;
   width: 20%;
   background: url("../../assets/footer.svg") no-repeat center center;
   background-size: contain;
-  height: 10vh;
+  height: 100px;
   margin-top: 50px;
   margin-bottom: 2%;
 }
-.footer-wrapper a{
+.footer-wrapper a {
   text-decoration: none;
 }
 
-@media(max-width:700px){
-  .svg-container{
-    width:30%;
+@media (max-width: 700px) {
+  .svg-container {
+    width: 30%;
   }
 }
