@@ -8,7 +8,6 @@ body {
   flex-wrap: wrap;
   column-gap: 2rem;
   min-height: 80vh;
-  /* margin-bottom: 123px; */
 }
 .which_tlf {
   display: inline-flex;
@@ -18,10 +17,8 @@ body {
   position: relative;
   flex-wrap: wrap;
   align-items: center;
-  height: calc(100% - 160px);
+  height: calc(100% - 115px);
 
-  /* margin: 2% 30px; */
-  /* margin-top: 25vh; */
 }
 .loading-wrapper {
   display: flex;
@@ -60,9 +57,7 @@ body {
   .which_tlf {
     justify-content: center;
   }
-  /* .item-info {
-    height: 65vh !important;
-  } */
+  
 }
 
 .which_tlf .item {
@@ -73,12 +68,6 @@ body {
   justify-content: end;
   align-items: center;
 }
-/* .item-frame {
-  height: 540px;
-  width: 540px;
-  height: 100%;
-  width: 100%;
-} */
 
 .item-frame {
   max-height: 540px;
@@ -164,18 +153,6 @@ body {
 
   height: inherit;
 }
-/* img.frame {
-  -o-border-image: url("/frame.svg") 93 92 87 92 stretch stretch;
-  border-image: url("../../assets/frame.svg") 93 92 87 92 stretch stretch;
-  border-color: #f4be52;
-  border-style: inset;
-  border-width: 60px;
-  display: block;
-  width: 450px;
-  height: 600px;
-  background-color: #ffe;
-  margin: 0 auto;
-} */
 
 .red_circle {
   display: inline-block;
@@ -311,7 +288,6 @@ body {
     object-fit: contain;
     height: 3rem;
     margin: 0;
-    /* margin-left: 5px; */
   }
   .info {
     width: 100%;
@@ -324,7 +300,6 @@ body {
   img.frame {
     height: 160px;
     width: 160px;
-    /* padding: 5rem; */
   }
   .opensea_link {
     display: flex;
@@ -375,13 +350,9 @@ body {
   .item-frame > img {
     width: 100%;
     height: auto;
-
-    /* padding: 8rem; */
-    /* padding: 30%; */
   }
   .modal .content {
     flex-direction: column;
-    /* padding: 40px; */
   }
 }
 
@@ -394,10 +365,8 @@ body {
   }
   img.frame {
     margin: 0;
-    /* padding: 6rem; */
   }
   .search_container {
     width: 90%;
-    /* margin: 0 15px; */
   }
 }
