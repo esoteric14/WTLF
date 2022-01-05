@@ -427,6 +427,7 @@ ul {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 30px;
+  position: relative;
 }
 .gamma_info_item {
   border-radius: 46px;

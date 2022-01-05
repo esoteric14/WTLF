@@ -59,7 +59,7 @@ const Modal = ({ isOpen, setIsOpen, data, rarityData }) => {
       className={isOpen ? "show modal" : "hide"}
       onClick={handleClickOutside}
     >
-      <div className="container overrideWidth" ref={ref}>
+      <div className="container overrideWidth m0" ref={ref}>
         <div className="flex content">
           <div className="modal__img">
             <img src={data.defaultPath} className="img-fluid" />
