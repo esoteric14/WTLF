@@ -233,7 +233,7 @@ body {
   align-items: flex-start;
   text-align: center;
 }
-.modal__info h2 {
+.modal__info h1, h3{
   color: #ffffff;
 }
 .modal__btn {
@@ -254,8 +254,8 @@ body {
   color: #ffffff;
   border: 1px solid #ffffff;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -326,8 +326,8 @@ body {
     padding: 0;
   }
 }
-.overrideWidth {
-  flex-direction: column;
+.overrideWidth{
+  /* flex-direction: column; */
   /* width: 90%; */
 }
 /* @media (min-width: 1200px) {
@@ -353,6 +353,9 @@ body {
   }
   .modal .content {
     flex-direction: column;
+  }
+  .modal__info{
+    align-items: center;
   }
 }
 
