@@ -445,12 +445,22 @@ ul {
 .gamma_info_item_data {
   padding: 80px 45px;
   background-color: #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
 }
 
 .gamma__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+.gamma__list.occurence{
+  position: absolute;
+  bottom: -50px;
+  left: 0;
 }
 .gamma__list p {
   font-family: "Open Sans", sans-serif;
@@ -634,4 +644,3 @@ ul {
   width: 7rem;
   margin-top: 40px;
 }
-
