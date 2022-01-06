@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef, useMemo } from "react";
+import React, { useState, useEffect, useRef} from "react";
 import { Link } from "react-router-dom";
 import { useNavigate, useLocation } from "react-router-dom";
-import { history } from "react-router";
+// import { history } from "react-router";
 import Search from "../Search/Search";
 import "./whichtlf.css";
 
@@ -22,70 +22,70 @@ const Loader = ({ isLoading }) => {
   return null;
 };
 
-const Modal = ({ isOpen, setIsOpen, data, rarityData }) => {
-  let navigation = useNavigate();
-  const ref = useRef(null);
-  const resetBodyStyle = () => {
-    const body = document.getElementsByTagName("body")[0];
-    body.style = null;
-  };
-  const handleClickOutside = (event) => {
-    if (ref.current && !ref.current.contains(event.target)) {
-      handleClose();
-    }
-  };
+// const Modal = ({ isOpen, setIsOpen, data, rarityData }) => {
+//   let navigation = useNavigate();
+//   const ref = useRef(null);
+//   const resetBodyStyle = () => {
+//     const body = document.getElementsByTagName("body")[0];
+//     body.style = null;
+//   };
+//   const handleClickOutside = (event) => {
+//     if (ref.current && !ref.current.contains(event.target)) {
+//       handleClose();
+//     }
+//   };
 
-  const handleClose = () => {
-    resetBodyStyle();
-    setIsOpen((_) => false);
-  };
+//   const handleClose = () => {
+//     resetBodyStyle();
+//     setIsOpen((_) => false);
+//   };
 
-  if (isOpen) {
-    document.addEventListener("click", handleClickOutside, false);
-    const body = document.getElementsByTagName("body")[0];
-    body.style.height = "100%";
-    body.style.overflow = "hidden";
-  } else {
-    document.removeEventListener("click", handleClickOutside, false);
-  }
+//   if (isOpen) {
+//     document.addEventListener("click", handleClickOutside, false);
+//     const body = document.getElementsByTagName("body")[0];
+//     body.style.height = "100%";
+//     body.style.overflow = "hidden";
+//   } else {
+//     document.removeEventListener("click", handleClickOutside, false);
+//   }
 
-  const handleBtnClick = (assetName) => {
-    resetBodyStyle();
-    navigation(`/WTLF?rarity=${assetName}`);
-  };
+//   const handleBtnClick = (assetName) => {
+//     resetBodyStyle();
+//     navigation(`/WTLF?rarity=${assetName}`);
+//   };
 
-  return (
-    <div
-      className={isOpen ? "show modal" : "hide"}
-      onClick={handleClickOutside}
-    >
-      <div className="container overrideWidth" ref={ref}>
-        <div className="flex content">
-          <div className="modal__img">
-            <img src={data.defaultPath} className="img-fluid" />
-          </div>
-          <div className="modal__info">
-            <div>
-              <h1>{rarityData.assetName}</h1>
-              <p>Rarity Grade: {rarityData.rarityGrade}</p>
-              <p>occurence: {rarityData.Count}/10000</p>
-            </div>
-            <button
-              type="button"
-              className="modal__btn"
-              onClick={() => handleBtnClick(rarityData.assetName)}
-            >
-              WTLF's
-            </button>
-          </div>
-        </div>
-        <div className="cross" title="Close" onClick={handleClose}>
-          X
-        </div>
-      </div>
-    </div>
-  );
-};
+//   return (
+//     <div
+//       className={isOpen ? "show modal" : "hide"}
+//       onClick={handleClickOutside}
+//     >
+//       <div className="container overrideWidth" ref={ref}>
+//         <div className="flex content">
+//           <div className="modal__img">
+//             <img src={data.defaultPath} className="img-fluid" />
+//           </div>
+//           <div className="modal__info">
+//             <div>
+//               <h1>{rarityData.assetName}</h1>
+//               <p>Rarity Grade: {rarityData.rarityGrade}</p>
+//               <p>occurence: {rarityData.Count}/10000</p>
+//             </div>
+//             <button
+//               type="button"
+//               className="modal__btn"
+//               onClick={() => handleBtnClick(rarityData.assetName)}
+//             >
+//               WTLF's
+//             </button>
+//           </div>
+//         </div>
+//         <div className="cross" title="Close" onClick={handleClose}>
+//           X
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 const getLinks = (label, data, handleFeatureClick, getRarityData) => {
   const links = data.split(",");
   if (links.length > 0) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart, Bar,Tooltip, ResponsiveContainer,LabelList, Label } from 'recharts';
+import { BarChart, Bar,LabelList, Label } from 'recharts';
 
 const Graph = () => {
     const data = [

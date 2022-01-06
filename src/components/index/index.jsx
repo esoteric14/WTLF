@@ -45,10 +45,10 @@ const Index = () => {
           document.removeEventListener("click", handleClickOutside, false);
         }
       
-        const handleBtnClick = (assetName) => {
-          resetBodyStyle();
-          navigation(`/WTLF?rarity=${assetName}`);
-        };
+        // const handleBtnClick = (assetName) => {
+        //   resetBodyStyle();
+        //   navigation(`/WTLF?rarity=${assetName}`);
+        // };
       
         return (
           <div
