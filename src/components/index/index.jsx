@@ -1,5 +1,5 @@
-import React,{useState,useRef} from "react";
-import {useNavigate} from"react-router-dom";
+import React, { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import Graph from "../graph";
 import './index.css';
 
@@ -9,69 +9,70 @@ import './index.css';
 const Index = () => {
 
     const [isOpen, setIsOpen] = useState(false);
-    const [data, setData]=useState({imgName:"",imgSrc:"",imglevel:""});
+    const [data, setData] = useState({ imgName: "", imgSrc: "", imglevel: "" });
 
-    const clickHandler =(name,src,level)=>{
+    const clickHandler = (name, src, level) => {
         setIsOpen(true);
-        setData(data=>({...data,
-            imgName:name,
-            imgSrc:src,
-            imglevel:level
+        setData(data => ({
+            ...data,
+            imgName: name,
+            imgSrc: src,
+            imglevel: level
         }));
     }
     const Modal = ({ isOpen, setIsOpen, data }) => {
         let navigation = useNavigate();
         const ref = useRef(null);
         const resetBodyStyle = () => {
-          const body = document.getElementsByTagName("body")[0];
-          body.style = null;
+            const body = document.getElementsByTagName("body")[0];
+            body.style = null;
         };
         const handleClickOutside = (event) => {
-          if (ref.current && !ref.current.contains(event.target)) {
-            handleClose();
-          }
+            if (ref.current && !ref.current.contains(event.target)) {
+                handleClose();
+            }
         };
-      
+
         const handleClose = () => {
-          resetBodyStyle();
-          setIsOpen((_) => false);
+            resetBodyStyle();
+            setIsOpen((_) => false);
         };
-      
-        if (isOpen) {
-          const body = document.getElementsByTagName("body")[0];
+
+        // if (isOpen) {
+        //   const body = document.getElementsByTagName("body")[0];
         //   body.style.height = "100%";
-          body.style.overflow = "hidden";
-        } else {
-          document.removeEventListener("click", handleClickOutside, false);
-        }
-      
+        //   body.style.overflow = "hidden";
+        // } else {
+        //   document.removeEventListener("click", handleClickOutside, false);
+        // }
+
         // const handleBtnClick = (assetName) => {
-        //   resetBodyStyle();
-        //   navigation(`/WTLF?rarity=${assetName}`);
+        //     resetBodyStyle();
+        //     navigation(`/WTLF?rarity=${assetName}`);
         // };
-      
+
         return (
-          <div
-            className={isOpen ? "show modal" : "hide"}
-            onClick={handleClickOutside}
-          >
-            <div className="container flex overrideWidth" ref={ref}>
-              <div className="flex content">
-                <div className="modal__img">
-                  <img src={data.imgSrc} className="img-fluid" />
+            <div
+                className={isOpen ? "show modal" : "hide"}
+                onClick={handleClickOutside}
+            >
+                <div className="container flex overrideWidth" ref={ref}>
+                    <div className="flex content">
+                        <div className="modal__img">
+                            <img src={data.imgSrc} className="img-fluid" />
+                        </div>
+                        <div className="modal__info">
+                            <h1>{data.imglevel}</h1>
+                            <h3>{data.imgName}</h3>
+                        </div>
+                    </div>
+                    <div className="cross" title="Close" onClick={handleClose}>
+                        &#10005;
+                    </div>
                 </div>
-                <div className="modal__info">
-                    <h1>{data.imglevel}</h1>
-                    <h3>{data.imgName}</h3>
-                </div>
-              </div>
-              <div className="cross" title="Close" onClick={handleClose}>
-                X
-              </div>
             </div>
-          </div>
         );
-      };
+    };
 
 
     return (
@@ -97,14 +98,14 @@ const Index = () => {
                             The characters were randomly generated & then hand-picked and graded for even more freshness and pop.
                         </p>
                         <p>
-                        Each has unqiue emotions and characteristics, some of which might make it rarer than others. Check out the rare feature on each WTLF, to get the rarer WTLF for yourself.
+                            Each has unqiue emotions and characteristics, some of which might make it rarer than others. Check out the rare feature on each WTLF, to get the rarer WTLF for yourself.
                         </p>
                         <a href="https://opensea.io/collection/wtlf" target="_blank">
                             <div className="openSea-btn">
-                            Buy On OpenSea      
+                                Buy On OpenSea
                             </div>
                         </a>
-                        
+
 
                     </div>
                 </div>
@@ -171,50 +172,48 @@ const Index = () => {
                             <p>The rarest of the rare are the “S-Class” and and the most common is “G-Class”. Each element gets a grade and when they are added together, you get the over all WTLF grade. So a WTLF with more  rare elements is more likely to be a higher grade WTLF.  </p>
                         </div>
                     </div>
+                    <div className="gamma_info_item gamma_info_item_data">
+                        <div className="gamma__list">
+                            <p><b>Level X:&nbsp;</b>1-3 Occurences</p>
+                            <p>| <a onClick={() => { clickHandler("Accessory - Laquered Comb - Orange", " https://images.wtlf.club/asset_examples/Level_X_Ex1.png", "Level X") }}>Example 1</a>
+                                <a onClick={() => { clickHandler("Clothes - Women's T-shirt - Green - Hello World", " https://images.wtlf.club/asset_examples/Level_X_Ex2.png", "Level X") }} className="gamma-md-hide">| Example 2</a></p>
+                        </div>
+                        <div className="gamma__list">
+                            <p><b>Level S:&nbsp;</b>4-10 Occurences</p>
+                            <p>| <a onClick={() => { clickHandler("Facial Hair - Chin strap - Blond", " https://images.wtlf.club/asset_examples/Level_S_Ex1.png", "Level S") }}>Example 1</a>
+                                <a onClick={() => { clickHandler("Clothes - Women's T-shirt - Navy Blue - E=MC2", " https://images.wtlf.club/asset_examples/Level_S_Ex2.png", "Level S") }} className="gamma-md-hide">| Example 2</a></p>
+                        </div>
+                        <div className="gamma__list">
+                            <p><b>Level A:&nbsp;</b>11-100 Occurences</p>
+                            <p>| <a onClick={() => { clickHandler("Eyewear - Butterfly Sunglasses - Clear Frame", " https://images.wtlf.club/asset_examples/Level_A_Ex1.png", "Level A") }}>Example 1</a>
+                                <a onClick={() => { clickHandler("Clothes - Varsity Jacket - Navy Blue - ETH Badge", " https://images.wtlf.club/asset_examples/Level_A_Ex2.png", "Level A") }} className="gamma-md-hide">| Example 2</a></p>
+                        </div>
+                        <div className="gamma__list">
+                            <p><b>Level B:&nbsp;</b>101-250 Occurences</p>
+                            <p>| <a onClick={() => { clickHandler("Background - Broadcast - Japanese Fans Peach", " https://images.wtlf.club/asset_examples/Level_B_Ex1.png", "Level B") }}>Example 1</a>
+                                <a onClick={() => { clickHandler("Hair - Chic Parting with Wild Hair - Black", " https://images.wtlf.club/asset_examples/Level_B_Ex2.png", "Level B") }} className="gamma-md-hide">| Example 2</a></p>
+                        </div>
+                        <div className="gamma__list">
+                            <p><b>Level C:&nbsp;</b>251-1,000 Occurences</p>
+                            <p>| <a onClick={() => { clickHandler("Headwear - Bowler Hat", " https://images.wtlf.club/asset_examples/Level_C_Ex1.png", "Level C") }}>Example 1</a>
+                                <a onClick={() => { clickHandler("Mouth - Rouge Lipstick", " https://images.wtlf.club/asset_examples/Level_C_Ex2.png", "Level C") }} className="gamma-md-hide">| Example 2</a></p>
+                        </div>
+                        <div className="gamma__list">
+                            <p><b>Level D:&nbsp;</b>1000+ Occurences</p>
+                            <p>| <a onClick={() => { clickHandler("Hair - Bald", " https://images.wtlf.club/asset_examples/Level_D_Ex1.png", "Level D") }}>Example 1</a>
+                                <a onClick={() => { clickHandler("Eyewear - Clear Eyeglasses", " https://images.wtlf.club/asset_examples/Level_D_Ex2.png", "Level D") }} className="gamma-md-hide">| Example 2</a></p>
+                            <div className="gamma__list occurence" style={{ marginTop: '20px' }}>
+                                <p>(All Occurences are out of 10,000)</p>
+                            </div>
+
+                        </div>
+                    </div>
                     <Modal
                         isOpen={isOpen}
                         setIsOpen={setIsOpen}
                         data={data}
                     ></Modal>
-                    <div className="gamma_info_item gamma_info_item_data">
-                        <div className="gamma__list">
-                            <p><b>Level X:&nbsp;</b>1-3 Occurences</p>
-                            <p>| <a onClick={()=>{clickHandler("Accessory - Laquered Comb - Orange"," https://images.wtlf.club/asset_examples/Level_X_Ex1.png","Level X")}}>Example 1</a>
-                            <a onClick={()=>{clickHandler("Clothes - Women's T-shirt - Green - Hello World"," https://images.wtlf.club/asset_examples/Level_X_Ex2.png","Level X")}} className="gamma-md-hide">| Example 2</a></p>
-                        </div>
-                        <div className="gamma__list">
-                            <p><b>Level S:&nbsp;</b>4-10 Occurences</p>
-                            <p>| <a onClick={()=>{clickHandler("Facial Hair - Chin strap - Blond"," https://images.wtlf.club/asset_examples/Level_S_Ex1.png","Level S")}}>Example 1</a>
-                            <a onClick={()=>{clickHandler("Clothes - Women's T-shirt - Navy Blue - E=MC2"," https://images.wtlf.club/asset_examples/Level_S_Ex2.png","Level S")}} className="gamma-md-hide">| Example 2</a></p>
-                        </div>
-                        <div className="gamma__list">
-                            <p><b>Level A:&nbsp;</b>11-100 Occurences</p>
-                            <p>| <a onClick={()=>{clickHandler("Eyewear - Butterfly Sunglasses - Clear Frame"," https://images.wtlf.club/asset_examples/Level_A_Ex1.png","Level A")}}>Example 1</a>
-                            <a onClick={()=>{clickHandler("Clothes - Varsity Jacket - Navy Blue - ETH Badge"," https://images.wtlf.club/asset_examples/Level_A_Ex2.png","Level A")}} className="gamma-md-hide">| Example 2</a></p>
-                        </div>
-                        <div className="gamma__list">
-                            <p><b>Level B:&nbsp;</b>101-250 Occurences</p>
-                            <p>| <a onClick={()=>{clickHandler("Background - Broadcast - Japanese Fans Peach"," https://images.wtlf.club/asset_examples/Level_B_Ex1.png","Level B")}}>Example 1</a>
-                            <a onClick={()=>{clickHandler("Hair - Chic Parting with Wild Hair - Black"," https://images.wtlf.club/asset_examples/Level_B_Ex2.png","Level B")}} className="gamma-md-hide">| Example 2</a></p>
-                        </div>
-                        <div className="gamma__list">
-                            <p><b>Level C:&nbsp;</b>251-1,000 Occurences</p>
-                            <p>| <a onClick={()=>{clickHandler("Headwear - Bowler Hat"," https://images.wtlf.club/asset_examples/Level_C_Ex1.png","Level C")}}>Example 1</a>
-                            <a onClick={()=>{clickHandler("Mouth - Rouge Lipstick"," https://images.wtlf.club/asset_examples/Level_C_Ex2.png","Level C")}} className="gamma-md-hide">| Example 2</a></p>
-                        </div>
-                        <div className="gamma__list">
-                            <p><b>Level D:&nbsp;</b>1000+ Occurences</p>
-                            <p>| <a onClick={()=>{clickHandler("Hair - Bald"," https://images.wtlf.club/asset_examples/Level_D_Ex1.png","Level D")}}>Example 1</a>
-                            <a onClick={()=>{clickHandler("Eyewear - Clear Eyeglasses"," https://images.wtlf.club/asset_examples/Level_D_Ex2.png","Level D")}} className="gamma-md-hide">| Example 2</a></p>
-                        </div>
-                        <div className="gamma__list" style={{ marginTop: '20px' }}><p>(All Occurences are out of 10,000)</p></div>
-                    </div>
                 </div>
-                {/* <Modal
-                    isOpen={isOpen}
-                    setIsOpen={setIsOpen}
-                    data={data}
-                ></Modal> */}
             </section>
             <section className="container wtlf__message">
                 <h2>collect your favourite WTLFs!</h2>
