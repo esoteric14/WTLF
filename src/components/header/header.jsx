@@ -79,7 +79,7 @@ const Header = () => {
         </div>
       </div>
       <div className={dropdownOpen ? "addspace" : "nospace"}></div>
-      <p className="header__tag"><a href="https://roguescollective.com" target="_blank">//roguescollective</a></p>
+      <p className="header__tag"><a href="http://roguescollective.com" target="_blank">//roguescollective</a></p>
     </div>
   );
 };
