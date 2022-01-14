@@ -180,7 +180,7 @@ body {
   height: 100%;
 
   position: absolute;
-  z-index: 2;
+  z-index: 99;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -232,7 +232,7 @@ body {
   text-align: center;
 }
 .modal__info h1,
-h3 {
+.modal__info h3{
   color: #ffffff;
 }
 .modal__btn {
@@ -270,7 +270,10 @@ h3 {
 }
 
 @media (max-width: 600px) {
-  .item-info {
+  .modal{
+    position: fixed;
+  }
+    .item-info {
     height: auto !important;
   }
   .which_tlf {

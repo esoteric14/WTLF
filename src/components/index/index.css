@@ -1,5 +1,7 @@
 @import "../../App.css";
-
+.black{
+  color: #000000;
+}
 .alpha {
   margin-top: calc(50vh - 102px);
 }
