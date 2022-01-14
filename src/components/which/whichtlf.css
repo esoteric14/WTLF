@@ -8,7 +8,6 @@ body {
   flex-wrap: wrap;
   column-gap: 2rem;
   min-height: 80vh;
-  /* margin-top: 10rem; */
 }
 .which_tlf {
   display: inline-flex;
@@ -341,7 +340,7 @@ body {
     display: inline;
   }
   .which_tlf .wrapper{
-    margin-top: 9rem;
+    margin-top: 8rem;
   }
 }
 
