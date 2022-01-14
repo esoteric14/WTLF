@@ -350,6 +350,9 @@ body {
   .which_tlf .wrapper {
     margin-top: 8rem;
   }
+  .which_tlf{
+    height: auto;
+  }
 }
 @media (max-width: 768px) {
   .which_tlf .item {
