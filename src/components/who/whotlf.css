@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 102px);
+  height: calc(100vh + 100px);
   min-height: 700px;
   position: relative;
 }

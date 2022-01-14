@@ -8,6 +8,7 @@ body {
   flex-wrap: wrap;
   column-gap: 2rem;
   min-height: 80vh;
+  /* margin-top: 10rem; */
 }
 .which_tlf {
   display: inline-flex;
@@ -17,7 +18,7 @@ body {
   position: relative;
   flex-wrap: wrap;
   align-items: center;
-  height: calc(100% - 115px);
+  height: calc(100% + 90px);
 
 }
 .loading-wrapper {
@@ -326,10 +327,10 @@ body {
     padding: 0;
   }
 }
-.overrideWidth{
+/* .overrideWidth{ */
   /* flex-direction: column; */
   /* width: 90%; */
-}
+/* } */
 /* @media (min-width: 1200px) {
   .overrideWidth {
     max-width: 90vw;
@@ -338,6 +339,9 @@ body {
 @media (max-width: 1024px) {
   .which_tlf {
     display: inline;
+  }
+  .which_tlf .wrapper{
+    margin-top: 9rem;
   }
 }
 
@@ -357,6 +361,7 @@ body {
   .modal__info{
     align-items: center;
   }
+  
 }
 
 @media (max-width: 425px) {
