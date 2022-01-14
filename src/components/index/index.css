@@ -1,7 +1,9 @@
 @import "../../App.css";
-
+.black{
+  color: #000000;
+}
 .alpha {
-  margin-top: 180px;
+  margin-top: calc(50vh - 102px);
 }
 .alpha .title {
   display: flex;
@@ -443,7 +445,7 @@ ul {
   max-height: 420px;
 }
 .gamma_info_item_data {
-  padding: 80px 45px;
+  padding: 80px 70px;
   background-color: #e5e5e5;
   display: flex;
   flex-direction: column;
@@ -470,7 +472,7 @@ ul {
   line-height: 23px;
   letter-spacing: -0.015em;
   color: #000000;
-  margin: 0 0 10px 0;
+  margin: 0 0 12px 0;
 }
 
 .gamma-img-container {

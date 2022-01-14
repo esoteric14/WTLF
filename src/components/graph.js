@@ -10,7 +10,7 @@ const Graph = () => {
       gradeA: 3150,
       gradeS: 500,
       gradeX: 50,
-    },
+    }
   ];
 
   const dataLabels = [
@@ -21,7 +21,7 @@ const Graph = () => {
       gradeA: 3150,
       gradeS: 500,
       gradeX: 50,
-    },
+    }
   ];
 
   const renderCustomizedLabelA = (props) => {

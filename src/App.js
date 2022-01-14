@@ -18,7 +18,7 @@ function App() {
           <Route path="WhatTLF" element={<Index />} />
           <Route path="WhoTLF" element={<Whotlf />} />
           <Route path="WhichTLF" element={<Whichtlf />} />
-          <Route path="/WTLF" element={<WTLF />} />
+          <Route path="WTLF" element={<WTLF />} />
         </Routes>
         <Footer />
       </div>
