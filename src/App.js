@@ -4,6 +4,7 @@ import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import Whotlf from "./components/who/whotlf";
 import Whichtlf from "./components/which/whichtlf";
+import Wheretlf from "./components/where/wheretlf";
 import { Routes, Route } from "react-router-dom";
 import Index from "./components/index";
 import WTLF from "./components/WTLF";
@@ -18,6 +19,7 @@ function App() {
           <Route path="WhatTLF" element={<Index />} />
           <Route path="WhoTLF" element={<Whotlf />} />
           <Route path="WhichTLF" element={<Whichtlf />} />
+          <Route path="WhereTLF" element={<Wheretlf />} />
           <Route path="WTLF" element={<WTLF />} />
         </Routes>
         <Footer />

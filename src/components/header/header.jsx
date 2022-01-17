@@ -41,6 +41,14 @@ const Header = () => {
               WhoTLF
             </li>
           </NavLink>
+          <NavLink
+            className={({ isActive }) => (isActive ? "active link-menu" : "inactive link-menu")}
+            to="/WhereTLF"
+          >
+            <li>
+              WhereTLF
+            </li>
+          </NavLink>
         </ul>
         <div className="hamburger" onClick={displaynav}>
           <div className="burger ham1"></div>
@@ -73,6 +81,14 @@ const Header = () => {
             >
               <li onClick={displaynav}>
                 WhoTLF
+              </li>
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active link-menu" : "inactive link-menu")}
+              to="/WhereTLF"
+            >
+              <li onClick={displaynav}>
+                WhereTLF
               </li>
             </NavLink>
           </ul>
