@@ -6,7 +6,7 @@ const Whotlf = () => {
         <section className='social'>
             <ul className='social-container'>
                 <li className='fb'>
-                    <a title='Facebook'>
+                    <a href="https://www.facebook.com/Rogues-Collective-100891032500527/"  rel="noopener noreferrer" title='Facebook'>
                         <img src="/social/fb.png" alt="fb" />
                         <span>rogues collective<br /><span style={{fontSize: '20px', fontWeight: '100'}}>(Pages)</span></span>
                     </a>
