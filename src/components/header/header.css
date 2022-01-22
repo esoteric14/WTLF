@@ -174,7 +174,7 @@ nav li:hover,
   color: #fff;
   font-size: x-large;
   font-weight: 200;
-  margin-bottom: 5em;
+  margin-bottom: 2em;
 }
 .dropActive .dropDown {
   display: block;
